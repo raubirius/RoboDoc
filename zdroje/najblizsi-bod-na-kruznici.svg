@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="360"
+   height="290"
+   viewBox="0 0 360 290"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="najblizsi-bod-na-kruznici.svg"
+   inkscape:export-filename="najblizsi-bod-na-kruznici.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="286.43891"
+     inkscape:cy="120.17522"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     units="px"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Bod na priamke"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.073729,-124.20049)">
+    <g
+       id="g107"
+       transform="translate(-65.146744,40.23794)">
+      <text
+         id="text4543"
+         y="206.54677"
+         x="362.75394"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="206.54677"
+           x="362.75394"
+           id="tspan4541"
+           sodipodi:role="line">najbližší bod (B)</tspan><tspan
+           id="tspan33"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="229.8801"
+           x="362.75394"
+           sodipodi:role="line">na kružnici</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="220.28877"
+         y="277.4729"
+         id="text4547"><tspan
+           id="tspan23"
+           sodipodi:role="line"
+           x="220.28877"
+           y="277.4729"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">stred S</tspan><tspan
+           id="tspan70"
+           sodipodi:role="line"
+           x="220.28877"
+           y="300.80624"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">kružnice</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="355.56754"
+         y="119.05647"
+         id="text4555"><tspan
+           sodipodi:role="line"
+           id="tspan4553"
+           x="355.56754"
+           y="119.05647"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">voľný</tspan><tspan
+           id="tspan31"
+           sodipodi:role="line"
+           x="355.56754"
+           y="142.3898"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">bod V</tspan></text>
+      <g
+         id="g87">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 200.49953,249.15458 156.2001,-97.04869"
+           id="path817"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           id="path821"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 292.80048,201.06273 -12.19199,-10.9886 m 0.6017,11.5903 10.98857,-12.19202"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           d="m 362.79323,157.59924 -12.192,-10.98859 m 0.60172,11.59032 10.98856,-12.192"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4527" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           d="M 206.59828,254.69477 194.40632,243.7062 m 0.6017,11.59028 10.98856,-12.192"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4529" />
+        <circle
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path52"
+           cx="200.5023"
+           cy="249.20047"
+           r="101.42857" />
+      </g>
+      <text
+         transform="rotate(-31.72629)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="73.40097"
+         y="280.07169"
+         id="text76"><tspan
+           sodipodi:role="line"
+           x="73.40097"
+           y="280.07169"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           id="tspan74">polomer r</tspan><tspan
+           id="tspan80"
+           sodipodi:role="line"
+           x="73.40097"
+           y="303.40503"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">kružnice ≡ |SB|</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280">
+<title>SVG tvary generované programovacím rámcom Programovací rámec GRobot 2.00 (2020-07-1), © 2010 – 2020, Roman Horváth</title>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <line stroke="black" stroke-width="0.5px" x1="21.141094794267573" x2="267.24749443057294" y1="285.71635906556753" y2="-3.8205816830269725" />
+  <line stroke="black" stroke-width="0.5px" x1="22.24810627992214" x2="261.34343317374856" y1="-6.634692242449148" y2="288.7183586263954" />
+  <line stroke="black" stroke-width="0.5px" x1="-19.861949853999675" x2="329.53408075724894" y1="235.30223824388236" y2="255.85494592689707" />
+  <circle cx="142.9268292682927" cy="142.4390243902439" fill="none" r="5.0" stroke="black" stroke-width="1.75px" />
+  <circle cx="60.0" cy="240.0" fill="none" r="5.0" stroke="black" stroke-width="1.75px" />
+  <circle cx="230.0" cy="250.0" fill="none" r="5.0" stroke="black" stroke-width="1.75px" />
+</g>
+</svg>

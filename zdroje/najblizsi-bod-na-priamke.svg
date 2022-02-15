@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="320"
+   viewBox="0 0 400 320"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="najblizsi-bod-na-priamke.svg"
+   inkscape:export-filename="najblizsi-bod-na-priamke.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="389.63182"
+     inkscape:cy="164.09666"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     units="px"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Bod na priamke"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.073729,-94.200485)">
+    <g
+       id="g873"
+       transform="translate(11.783794,9.6183605)">
+      <g
+         id="g852">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 18.83311,199.64648 365.51608,186.466"
+           id="path815"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 201.59115,292.87948 93.233,-182.75804"
+           id="path817"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           id="path821"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 204.12328,300.6857 -5.06427,-15.6124 m -5.27406,10.33834 15.61239,-5.06431"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           d="m 297.35629,117.92766 -5.06428,-15.6124 m -5.27406,10.33837 15.61238,-5.0643"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4527" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           d="m 88.071867,241.48269 -5.064261,-15.61236 m -5.274055,10.33833 15.612374,-5.0643"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4529" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           d="m 320.17471,359.88868 -5.06427,-15.6124 m -5.27406,10.33837 15.61239,-5.0643"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4531" />
+      </g>
+      <text
+         id="text4543"
+         y="318.53503"
+         x="152.77776"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="318.53503"
+           x="152.77776"
+           id="tspan4541"
+           sodipodi:role="line">najbližší bod</tspan><tspan
+           id="tspan33"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="341.86838"
+           x="152.77776"
+           sodipodi:role="line">na priamke</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="129.80038"
+         y="192.05557"
+         id="text4547"><tspan
+           sodipodi:role="line"
+           id="tspan4545"
+           x="129.80038"
+           y="192.05557"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">určujúci bod</tspan><tspan
+           id="tspan23"
+           sodipodi:role="line"
+           x="129.80038"
+           y="215.3889"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">priamky A</tspan></text>
+      <text
+         id="text4551"
+         y="305.10941"
+         x="341.23895"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="305.10941"
+           x="341.23895"
+           id="tspan4549"
+           sodipodi:role="line">určujúci bod</tspan><tspan
+           id="tspan29"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="328.44275"
+           x="341.23895"
+           sodipodi:role="line">priamky B</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29166651px;line-height:1.25;font-family:'Calibri Light';-inkscape-font-specification:'Calibri Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="315.6459"
+         y="135.60141"
+         id="text4555"><tspan
+           sodipodi:role="line"
+           id="tspan4553"
+           x="315.6459"
+           y="135.60141"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">voľný</tspan><tspan
+           id="tspan31"
+           sodipodi:role="line"
+           x="315.6459"
+           y="158.93474"
+           style="font-size:18.66666603px;text-align:center;text-anchor:middle;stroke-width:0.26458332">bod V</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="ikony-getter-setter.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="174.89606"
+     inkscape:cy="884.73541"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       y="28.790762"
+       x="24.285711"
+       id="image3761"
+       xlink:href="file:///C:/Users/ROMANH~1/AppData/Local/Temp/inkscape-clipboard-import"
+       height="98.571426"
+       width="131.42857"
+       style="opacity:1" />
+    <g
+       id="g3824"
+       style="stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\getter.png"
+       inkscape:export-xdpi="11"
+       inkscape:export-ydpi="11">
+      <rect
+         y="43.433609"
+         x="25.357143"
+         height="84.64286"
+         width="130"
+         id="rect3775"
+         style="fill:#93ac93;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;opacity:1" />
+      <g
+         style="fill:#dbe3db;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="g3802">
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path3780"
+           d="m 31.428573,40.93361 c 31.911772,-11.545901 44.776933,-4.388996 58.56349,0 l 0,79.28572 c -16.26166,-5.16841 -32.881973,-9.33021 -58.56349,0 z"
+           inkscape:transform-center-y="-44.15913"
+           inkscape:transform-center-x="-0.96533164"
+           style="opacity:1;fill:#dbe3db;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-dasharray:none" />
+        <path
+           style="opacity:1;fill:#dbe3db;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-dasharray:none"
+           inkscape:transform-center-x="-0.84850475"
+           inkscape:transform-center-y="-44.15913"
+           d="m 38.515872,34.505039 c 28.049837,-11.545901 39.358068,-4.388996 51.476187,0 l 0,79.285721 c -14.293687,-5.16841 -28.902624,-9.33021 -51.476187,0 z"
+           id="rect3777"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           style="opacity:1;fill:#dbe3db;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-dasharray:none"
+           inkscape:transform-center-x="0.96534076"
+           inkscape:transform-center-y="-44.15913"
+           d="m 148.92856,40.755039 c -31.91176,-11.545901 -44.77693,-4.388996 -58.563481,0 l 0,79.285721 c 16.261661,-5.16841 32.881971,-9.33021 58.563481,0 z"
+           id="path3782"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path3784"
+           d="m 141.84127,34.326468 c -28.04984,-11.545901 -39.35807,-4.388996 -51.476188,0 l 0,79.285722 c 14.293678,-5.16841 28.902628,-9.33021 51.476188,0 z"
+           inkscape:transform-center-y="-44.15913"
+           inkscape:transform-center-x="0.84851143"
+           style="opacity:1;fill:#dbe3db;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-dasharray:none" />
+      </g>
+    </g>
+    <g
+       id="g3862"
+       inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\setter.png"
+       inkscape:export-xdpi="11"
+       inkscape:export-ydpi="11">
+      <path
+         inkscape:export-ydpi="11"
+         inkscape:export-xdpi="11"
+         inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\g3810.png"
+         inkscape:connector-curvature="0"
+         id="path3840"
+         d="m 218.21429,104.1479 12.5,11.78571 L 250,101.29075 l 23.21429,-7.499997 0.35714,-34.285715 -31.42857,-3.928571 -19.28572,23.571428 z"
+         style="fill:#1a1a1a;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:export-ydpi="11"
+         inkscape:export-xdpi="11"
+         inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\g3810.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3796"
+         d="m 249.50768,66.705835 -29.04189,43.941635 -5.55584,16.16244 12.87945,-10.35406 29.54696,-44.194176"
+         style="fill:#de8787;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+      <g
+         inkscape:export-ydpi="11"
+         inkscape:export-xdpi="11"
+         inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\g3810.png"
+         style="fill:#ffe680;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="g3798">
+        <path
+           style="fill:#ffe680;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 326.02673,53.573852 -21.2132,1.010153 C 293.0517,49.196525 282.60128,43.809044 261.12443,38.421564 l -5.80837,-0.505076 c -9.7602,8.408235 -7.29583,9.685471 -9.84899,13.889597 l 52.18348,36.709944 37.59536,-5.691081"
+           id="path3790"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+        <path
+           style="fill:#ffe680;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 335.11811,82.868276 -25.00128,4.798225 c -1.45538,2.862099 -1.94423,5.724197 -6.56599,8.586296 -12.85272,5.612893 -17.78097,5.678663 -24.24366,6.818533 l -9.84899,1.01015 c -18.21561,6.25926 -15.26293,4.55119 -23.49874,6.81853 -3.54148,4.78484 -6.59157,5.95393 -8.97933,7.60678 -5.75991,3.41182 -7.38684,4.46991 -10.45341,4.51505 -3.61063,-2.35702 -4.57085,-5.24976 -4.79823,-7.07107 3.47483,-6.11757 8.77152,-10.48772 10.51995,-11.78263 7.88434,-5.31809 12.76169,-9.359504 26.8557,-12.208491 5.39685,-9.877062 1.68542,-12.922913 2.27284,-19.192898 -2.87845,-2.506348 -8.57415,-3.805305 -16.16244,-4.293149 -9.2775,12.992646 -13.16687,11.476062 -17.42513,14.394674 -0.005,7.176354 1.61856,15.283488 -2.77792,19.950514 -1.71788,7.58861 -3.92552,11.7489 -6.31345,14.64721 -1.84512,0.85545 -4.0475,0.99639 -6.566,0.50508 0.95083,-21.993949 2.99765,-26.45227 4.54569,-38.890876 8.64156,-12.334092 15.17056,-17.343434 20.11114,-22.98097 2.04073,-4.111547 4.08145,-7.576653 6.6579,-9.848988 4.29315,-2.617376 8.5863,-0.566033 12.87945,-0.757614"
+           id="path3788"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccccccccccccc" />
+      </g>
+      <path
+         inkscape:export-ydpi="11"
+         inkscape:export-xdpi="11"
+         inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\g3810.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3794"
+         d="m 279.23166,15.682819 -33.50229,53.333827 10.41902,6.770843 33.25055,-53.313791 c -2.84301,-7.682766 -6.61477,-6.148906 -10.16728,-6.790879 z"
+         style="fill:#de8787;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+      <g
+         inkscape:export-ydpi="11"
+         inkscape:export-xdpi="11"
+         style="fill:#fff6d5;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="g3810">
+        <path
+           style="fill:#fff6d5;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 222.20293,117.42268 c 3.43509,-5.28845 6.52569,-8.21052 8.61693,-8.79551 2.72673,1.17965 5.99696,1.45345 6.81853,5.80837 -6.70399,5.73827 -8.15413,5.57371 -11.8693,7.7254"
+           id="path3792"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:#fff6d5;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 213.75,104.68361 3.03572,0.35714 c -0.10508,6.3227 -1.74172,12.15293 -4.10715,12.85714"
+           id="path3808"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0"
+       d="M 76.78125,156.28125 98.3125,177.8125 C 66.739174,199.24807 64.403386,231.6088 74.638393,257.29464 76.155867,236.81773 108.2207,199.87386 121.84375,201.34375 L 142.5,222 l 0,-65.71875 z"
+       id="rect3878"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\alias.png"
+       inkscape:export-xdpi="12.117589"
+       inkscape:export-ydpi="12.117589" />
+  </g>
+</svg>

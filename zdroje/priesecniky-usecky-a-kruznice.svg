@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250">
+<title>SVG tvary generované programovacím rámcom Programovací rámec GRobot 2.00 (2020-07-1), © 2010 – 2020, Roman Horváth</title>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <line stroke="black" stroke-width="0.5px" x1="110.0" x2="200.0" y1="155.0" y2="45.0" />
+  <circle cx="110.0" cy="135.0" fill="none" r="80.0" stroke="black" stroke-width="0.5px" />
+  <text fill="black" font-family="Cambria" font-size="12.0px" x="90.50342312164162" y="45.44326346384024" >k</text>
+  <line stroke="black" stroke-width="0.5px" x1="110.0" x2="102.92893218813452" y1="155.0" y2="147.92893218813452" />
+  <line stroke="black" stroke-width="0.5px" x1="110.0" x2="102.92893218813452" y1="155.0" y2="162.07106781186548" />
+  <line stroke="black" stroke-width="0.5px" x1="110.0" x2="117.07106781186548" y1="155.0" y2="162.07106781186548" />
+  <line stroke="black" stroke-width="0.5px" x1="110.0" x2="117.07106781186548" y1="155.0" y2="147.92893218813452" />
+  <text fill="black" font-family="Cambria" font-size="12.0px" x="121.5" y="174.0" >A</text>
+  <line stroke="black" stroke-width="0.5px" x1="200.0" x2="192.92893218813452" y1="45.0" y2="37.928932188134524" />
+  <line stroke="black" stroke-width="0.5px" x1="200.0" x2="192.92893218813452" y1="45.0" y2="52.071067811865476" />
+  <line stroke="black" stroke-width="0.5px" x1="200.0" x2="207.07106781186548" y1="45.0" y2="52.071067811865476" />
+  <line stroke="black" stroke-width="0.5px" x1="200.0" x2="207.07106781186548" y1="45.0" y2="37.928932188134524" />
+  <text fill="black" font-family="Cambria" font-size="12.0px" x="211.5" y="64.0" >B</text>
+  <line stroke="black" stroke-width="1.75px" x1="169.8221702202676" x2="172.4103606712928" y1="81.88401417522849" y2="72.2247559123378" />
+  <line stroke="black" stroke-width="1.75px" x1="169.8221702202676" x2="160.16291195737693" y1="81.88401417522849" y2="79.29582372420327" />
+  <line stroke="black" stroke-width="1.75px" x1="169.8221702202676" x2="167.2339797692424" y1="81.88401417522849" y2="91.54327243811917" />
+  <line stroke="black" stroke-width="1.75px" x1="169.8221702202676" x2="179.48142848315828" y1="81.88401417522849" y2="84.4722046262537" />
+  <text fill="black" font-family="Cambria" font-size="12.0px" x="186.3221702202676" y="85.88401417522849" >P</text>
+</g>
+</svg>

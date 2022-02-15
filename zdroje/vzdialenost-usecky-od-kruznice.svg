@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280">
+<title>SVG tvary generované programovacím rámcom Programovací rámec GRobot 2.00 (2020-07-1), © 2010 – 2020, Roman Horváth</title>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <line stroke="#0000b0" stroke-width="0.5px" x1="70.0" x2="30.0" y1="50.0" y2="230.0" />
+  <circle cx="200.0" cy="150.0" fill="none" r="60.0" stroke="#0000b0" stroke-width="0.5px" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="70.0" x2="77.07106781186548" y1="50.0" y2="42.928932188134524" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="70.0" x2="62.928932188134524" y1="50.0" y2="42.928932188134524" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="70.0" x2="62.928932188134524" y1="50.0" y2="57.071067811865476" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="70.0" x2="77.07106781186548" y1="50.0" y2="57.071067811865476" />
+  <text fill="#dc9600" font-family="Cambria" font-size="12.0px" x="44.5" y="32.0" >S1[x1, y1]</text>
+  <line stroke="#dc9600" stroke-width="0.5px" x1="30.0" x2="37.071067811865476" y1="230.0" y2="222.92893218813452" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="30.0" x2="22.928932188134524" y1="230.0" y2="222.92893218813452" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="30.0" x2="22.928932188134524" y1="230.0" y2="237.07106781186548" />
+  <line stroke="#dc9600" stroke-width="0.5px" x1="30.0" x2="37.071067811865476" y1="230.0" y2="237.07106781186548" />
+  <text fill="#dc9600" font-family="Cambria" font-size="12.0px" x="4.5" y="256.0" >S2[x2, y2]</text>
+  <line stroke="#8c4000" stroke-width="0.5px" x1="200.0" x2="207.07106781186548" y1="150.0" y2="142.92893218813452" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="200.0" x2="192.92893218813452" y1="150.0" y2="142.92893218813452" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="200.0" x2="192.92893218813452" y1="150.0" y2="157.07106781186548" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="200.0" x2="207.07106781186548" y1="150.0" y2="157.07106781186548" />
+  <text fill="#8c4000" font-family="Cambria" font-size="12.0px" x="174.5" y="176.0" >S3[x3, y3]</text>
+  <line stroke="#8c4000" stroke-width="0.5px" x1="54.94117647058823" x2="62.01224428245371" y1="117.76470588235294" y2="110.69363807048747" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="54.94117647058823" x2="47.870108658722756" y1="117.76470588235294" y2="110.69363807048747" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="54.94117647058823" x2="47.870108658722756" y1="117.76470588235294" y2="124.83577369421842" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="54.94117647058823" x2="62.01224428245371" y1="117.76470588235294" y2="124.83577369421842" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="141.42877638896283" x2="148.4998442008283" y1="136.98417253088064" y2="129.91310471901517" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="141.42877638896283" x2="134.35770857709736" y1="136.98417253088064" y2="129.91310471901517" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="141.42877638896283" x2="134.35770857709736" y1="136.98417253088064" y2="144.05524034274612" />
+  <line stroke="#8c4000" stroke-width="0.5px" x1="141.42877638896283" x2="148.4998442008283" y1="136.98417253088064" y2="144.05524034274612" />
+  <line stroke="#00b000" stroke-width="0.5px" x1="200.0" x2="141.42877638896283" y1="150.0" y2="136.9841725308806" />
+  <text fill="#00b000" font-family="Cambria" font-size="12.0px" x="172.11913643521723" y="129.92071918212918" >r</text>
+  <line stroke="#b00000" stroke-width="0.5px" x1="141.42877638896283" x2="54.9411764705882" y1="136.98417253088064" y2="117.76470588235293" />
+  <text fill="#b00000" font-family="Cambria" font-size="12.0px" transform="rotate(12.528807709151522, 102.08972467051132, 109.80307212330563)" x="72.08972467051132" y="113.80307212330563" >vzdialenosť</text>
+</g>
+</svg>

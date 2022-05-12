@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="788.99097"
+   height="381.34015"
+   viewBox="0 0 788.99097 381.34015"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="odraz-mimo-hranic.svg"
+   inkscape:export-filename="odraz-mimo-hranic.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     lock-margins="true"
+     fit-margin-top="25"
+     fit-margin-left="25"
+     fit-margin-right="25"
+     fit-margin-bottom="25"
+     inkscape:zoom="0.90583672"
+     inkscape:cx="449.30835"
+     inkscape:cy="305.24265"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     units="px"
+     width="800px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.9102272,-19.756961)">
+    <g
+       id="g20882"
+       transform="translate(42.644735,-39.431775)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="515.35651"
+         y="386.50543"
+         id="text2358"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;fill:#000000;stroke:none;stroke-width:1.5"
+           x="515.35651"
+           y="386.50543"
+           id="tspan9648">poloha() – aktuálna</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;fill:#000000;stroke:none;stroke-width:1.5"
+           x="515.35651"
+           y="411.50543"
+           id="tspan9650">poloha (mimo hraníc)</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="215.83206"
+         y="99.384048"
+         id="text7336"><tspan
+           sodipodi:role="line"
+           id="tspan7334"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="215.83206"
+           y="99.384048">poleBodov[0]</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="215.83206"
+           y="124.38405"
+           id="tspan9440">pôvodná poloha</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="464.60245"
+         y="100.2067"
+         id="text7420"><tspan
+           sodipodi:role="line"
+           id="tspan7418"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="464.60245"
+           y="100.2067">poleBodov[1]</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="464.60245"
+           y="125.2067"
+           id="tspan9544">výsledná poloha</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="102.91672"
+         y="232.70801"
+         id="text8046"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="102.91672"
+           y="232.70801"
+           id="tspan9754">poleBodov[2] – prvý bod</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="102.91672"
+           y="257.70801"
+           id="tspan9756">hranice kolízie</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="588.22601"
+         y="229.83038"
+         id="text8368"><tspan
+           sodipodi:role="line"
+           id="tspan8366"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="588.22601"
+           y="229.83038">poleBodov[3] – druhý bod</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;stroke-width:1.5"
+           x="588.22601"
+           y="254.83038"
+           id="tspan11832">hranice kolízie</tspan></text>
+      <g
+         id="g5191"
+         transform="matrix(0.80584747,0,0,0.80584747,25.432926,53.938806)"
+         style="stroke-width:1.24093">
+        <path
+           style="fill:none;stroke:#800080;stroke-width:2.48186;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+           d="M 100.13095,260.76814 H 673.59839"
+           id="path857" />
+        <path
+           style="fill:none;stroke:#0000ff;stroke-width:2.48186;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+           d="M 478.48935,419.46672 295.24,102.06954"
+           id="path7561" />
+        <path
+           style="fill:none;stroke:#808080;stroke-width:2.48186;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+           d="M 483.21041,102.06954 387.38715,259.90755"
+           id="path941"
+           sodipodi:nodetypes="cc" />
+        <circle
+           style="fill:#ff0000;stroke:none;stroke-width:1.86139;paint-order:stroke fill markers;stop-color:#000000"
+           id="path11936"
+           cx="386.86469"
+           cy="260.76816"
+           r="11.252517" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#ff0000;stroke:none;stroke-width:1.5;paint-order:stroke fill markers;stop-color:#000000"
+         x="4.6109533"
+         y="434.52151"
+         id="text12350"
+         transform="rotate(-40.33327)"><tspan
+           sodipodi:role="line"
+           id="tspan12348"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Verdana;-inkscape-font-specification:Verdana;fill:#ff0000;stroke-width:1.5"
+           x="4.6109533"
+           y="434.52151">priesečník</tspan></text>
+    </g>
+  </g>
+</svg>

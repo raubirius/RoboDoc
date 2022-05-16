@@ -75,7 +75,7 @@
 
 <!--
 
-Trieda v tvare:
+Trieda v tvare (vrátane tabulátora):
 	«HTML súbor»#«trieda»
 do tvaru:
 <code><a href="«HTML súbor».html">«trieda»</a></code>: 
@@ -91,7 +91,7 @@ Napr.:
 <code><a href="$1.html">$2</a></code>: 
 
 
-Metóda v tvare:
+Metóda v tvare (vrátane tabulátorov):
 		«HTML súbor»#«metóda»«argumenty»
 do tvaru:
 <code><a href="«HTML súbor».html#«metóda»«argumenty»">«metóda»</a></code>, 
@@ -129,76 +129,96 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 <div class="block">
 
 
-<h3>Verzia 2.12 (v procese vývoja) – ??? 23. marec 2022</h3>
+<h3>Verzia 2.14 (v procese vývoja) – ??? 13. máj 2022</h3>
 
 <p>(pracuje sa)</p>
 
-<pre style="font-family: sans-serif">Novinky:
+<ul>
 
-SVGPodpora: definície
+<li>Pridané metódy triedy <code><a href="Svet.html">Svet</a></code>: <code><a href="Svet.html#násobTiky--">násobTiky</a></code>, <code><a href="Svet.html#čísloTiku--">čísloTiku</a></code>, <code><a href="Svet.html#tik--">tik</a></code>.</li>
 
-PoznámkovýBlok a Tlačidlo implementujú Rozmer
+<li>Pridané metódy triedy <code><a href="GRobot.html">GRobot</a></code>: <code><a href="GRobot.html#vypniOhraničenie--">vypniOhraničenie</a></code>, <code><a href="GRobot.html#zapniOhraničenie--">zapniOhraničenie</a></code>.</li>
 
-Skorigované metódy:
-• reťazecNaCeléČíslo(
-• reťazecNaReálneČíslo(
-Teraz sú schopné prijať aj prázdny reťazec alebo reťazec s hodnotou <code class="value">null</code>.
+</ul>
 
-• PoznámkovýBlok#zarovnať-int-
-• PoznámkovýBlok#režimZobrazeniaRolovacíchLíšt--
-• PoznámkovýBlok#rolovanie--
-…
 
-správanie metód
-• PoznámkovýBlok#zakážTabulátor--
-• PoznámkovýBlok#zakážEnter--
-bolo sprísnené – už nie sú zakázané len klávesy, ale aj celkové vkladanie týchto znakov.
+<h3>Verzia 2.12 – <del>23. marec 2022</del> 12. máj 2022</h3>
 
-• PoznámkovýBlok#zrušDekor-boolean-
-Bola opravená chyba poznámkového bloku, ktorá spôsobovala zrútenie aplikácie v prípade, že bol ľubovoľný poznámkový blok inicializovaný v režime skrytého okna sveta.
-• GRobot-Spojnica#skry--
-• SVGPodpora#dajAtribúty-int-
-• Schránka#kresba--
-• GRobot#mierkaPomeru--
-• GRobot#pomerPodľaMierky--
-• GRobot#náhodnýPomer-double-
-• GRobot#náhodnýRozmer-double-
-• GRobot#náhodnýRozmer-double-double-
-• GRobot#spojniceZ--
-• GRobot#spojniceDo--
-• GRobot#súSpojniceZ--
-• GRobot#súSpojniceDo--
-• GRobot-Spojnica#parameter-String-
-• GRobot-Spojnica#parameter-String-Object-
+<p>Novinky:</p>
 
-Opravy:
-• metódy overujúce prítomnosť bodu v obdĺžniku alebo štvorci boli korigované tak, aby poskytovali správne výsledky aj pre veľké hodnoty zaoblenia (také, ktoré by teoreticky mali presahovať polomer tvaru a tým ho neprimerane deformovať, pričom v skutočnosti sú tieto hodnoty metódami kreslenia orezané tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu)
+<ul>
+
+<li>Do triedy <code><a href="SVGPodpora.html">SVGPodpora</a></code> boli pridané tzv. definície: <code><a href="SVGPodpora.html#definície--">definície</a></code>.</li>
+
+<li>Triedy <code><a href="PoznaamkovyyBlok.html">PoznámkovýBlok</a></code> a <code><a href="Tlaccidlo.html">Tlačidlo</a></code> teraz implementujú rozhranie <code><a href="Rozmer.html">Rozmer</a></code>.</li>
+
+<li>Boli skorigované metódy triedy <code><a href="Svet.html">Svet</a></code>: <code><a href="Svet.html#reťazecNaCeléČíslo-String-">reťazecNaCeléČíslo</a></code>, <code><a href="Svet.html#reťazecNaReálneČíslo-String-">reťazecNaReálneČíslo</a></code>. Teraz sú schopné prijať aj prázdny reťazec alebo reťazec s hodnotou <code class="value">null</code>.</li>
+
+<li>Metódy triedy <code><a href="PoznaamkovyyBlok.html">PoznámkovýBlok</a></code>: <code><a href="PoznaamkovyyBlok.html#zarovnať-int-">zarovnať</a></code>, <code><a href="PoznaamkovyyBlok.html#režimZobrazeniaRolovacíchLíšt--">režimZobrazeniaRolovacíchLíšt</a></code>, <code><a href="PoznaamkovyyBlok.html#rolovanie--">rolovanie</a></code> boli buď pridané alebo opravené (revízia zoznamu zmien bola vykonaná až s ročným oneskorením).</li>
+
+</ul><p>…</p><ul>
+
+<li>Správanie metód <code><a href="PoznaamkovyyBlok.html">PoznámkovýBlok</a></code>: <code><a href="PoznaamkovyyBlok.html#zakážTabulátor--">zakážTabulátor</a></code>, <code><a href="PoznaamkovyyBlok.html#zakážEnter--">zakážEnter</a></code> bolo sprísnené – už nie sú zakázané len klávesy, ale aj celkové vkladanie týchto znakov.</li>
+
+<li>Bola opravená chyba poznámkového bloku, ktorá spôsobovala zrútenie aplikácie v prípade, že bol ľubovoľný poznámkový blok inicializovaný v režime skrytého okna sveta.</li>
+
+<li>Boli pridané metódy rôznych tried:
+<code><a href="PoznaamkovyyBlok.html#zrušDekor-boolean-">zrušDekor</a></code>,
+<code><a href="GRobot-Spojnica.html#skry--">skry</a></code>,
+<code><a href="SVGPodpora.html#dajAtribúty-int-">dajAtribúty</a></code>,
+<code><a href="Schraanka.html#kresba--">kresba</a></code>,
+<code><a href="GRobot.html#mierkaPomeru--">mierkaPomeru</a></code>,
+<code><a href="GRobot.html#pomerPodľaMierky--">pomerPodľaMierky</a></code>,
+<code><a href="GRobot.html#náhodnýPomer-double-">náhodnýPomer</a></code>,
+<code><a href="GRobot.html#náhodnýRozmer-double-">náhodnýRozmer</a></code>,
+<code><a href="GRobot.html#náhodnýRozmer-double-double-">náhodnýRozmer</a></code>,
+<code><a href="GRobot.html#spojniceZ--">spojniceZ</a></code>,
+<code><a href="GRobot.html#spojniceDo--">spojniceDo</a></code>,
+<code><a href="GRobot.html#súSpojniceZ--">súSpojniceZ</a></code>,
+<code><a href="GRobot.html#súSpojniceDo--">súSpojniceDo</a></code>,
+<code><a href="GRobot-Spojnica.html#parameter-String-">parameter</a></code>,
+<code><a href="GRobot-Spojnica.html#parameter-String-Object-">parameter</a></code>.</li>
+
+<p>Opravy:</p>
+
+<ul><li>metódy overujúce prítomnosť bodu v obdĺžniku alebo štvorci boli
+korigované tak, aby poskytovali správne výsledky aj pre veľké hodnoty zaoblenia
+(také, ktoré by teoreticky mali presahovať polomer tvaru a tým ho neprimerane
+deformovať, pričom v skutočnosti sú tieto hodnoty metódami kreslenia orezané
+tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu).</li></ul>
+
 
 <h3>Verzia 2.10 – <del>24. februára 2021</del> 27. júla 2021</h3>
 
-<p>(pracuje sa)</p>
+<ul>
+<li>Novinky: <code><a href="Svet.html#pridajVnorenúPonuku-String-JMenuItem...-">pridajVnorenúPonuku</a></code>, <code><a href="Svet.html#nespi--">nespi</a></code>.</li>
 
-<pre style="font-family: sans-serif">Novinky:
-• Svet#pridajVnorenúPonuku-String-JMenuItem...-
-• Svet#nespi--
-• Tlač
-• GRobot#grafika--
-• GRobot#obrázok--
-• GRobot#začniKreslenie-java.awt.Graphics2D-
-• GRobot#skončiKreslenie-java.awt.Graphics2D-
-• Svet#zavrieť-- (systém zatvárania aplikácie bol revidovaný)
-• aktívneSlováFIX
-• PoznámkovýBlok#zakážTabulátor--
-• PoznámkovýBlok#zakážEnter--
+<li>Pridaná trieda: <code><a href="Tlacc.html">Tlač</a></code>.</li>
 
-Plán:
-• rozhranie Rozmer (zahŕňa množstvo modifikácií) – rozpracované
-• konverzia Zoznam na rozšírenie Stack – zvažuje sa
+<li>Úpravy/opravy metód rôznych tried:
+<code><a href="GRobot.html#grafika--">grafika</a></code>,
+<code><a href="GRobot.html#obrázok--">obrázok</a></code>,
+<code><a href="GRobot.html#začniKreslenie-java.awt.Graphics2D-">začniKreslenie</a></code>,
+<code><a href="GRobot.html#skončiKreslenie-java.awt.Graphics2D-">skončiKreslenie</a></code>,
+<code><a href="Svet.html#zavrieť--">zavrieť</a></code>
+(systém zatvárania aplikácie bol revidovaný),
+<code><a href="Plaatno.html#vypíšAktívneSlovo-String-Object[]-">vypíšAktívneSlovo</a></code> (niečo v rámci celého mechanizmu bolo opravené – nemusí ísť priamo o túto metódu; revízia zoznamu zmien bola vykonaná až s ročným oneskorením),
+<code><a href="PoznaamkovyyBlok.html#zakážTabulátor--">zakážTabulátor</a></code>,
+<code><a href="PoznaamkovyyBlok.html#zakážEnter--">zakážEnter</a></code>
+.</li>
 
-Opravy:
-• SVGPodpora#text-String-GRobot-String...-
-  rieši základné entity pre znaky: &amp;, &lt;, &gt;, &apos;, &quot;.
-</pre>
+</ul><p>Plány začaté alebo navrhnuté pri tejto verzii:</p><ul>
+
+<li>Pridanie rozhrania <code><a href="Rozmer.html">Rozmer</a></code> (bude zahŕňať množstvo modifikácií) – rozpracované</li>
+
+<li>Konverzia triedy <code><a href="Zoznam.html">Zoznam</a></code> na rozšírenie triedy <code><a href="Stack.html">Stack</a></code> – zvažuje sa.</li>
+
+</ul><p>Opravy:</p><ul>
+
+<li><code><a href="SVGPodpora.html#text-String-GRobot-String...-">text</a></code> rieši základné entity pre znaky: &amp;, &lt;, &gt;, &apos;, &quot;.</li>
+
+</ul>
+
 
 <h3>Verzia 2.00 – 20. novembra 2019 (do januára 2021)</h3>
 
@@ -282,36 +302,23 @@ https://touchit.sk/jazykove-okienko-ako-je-to-so-slovom-robot/142383
 
 <li>Bola sprístupnená skupina metód generujúcich <a href="Svet.html#perlin-double-double-double-">Perlinov šum</a>.</li>
 
-<li>Oprava chýb v metóde triedy <code><a href="PolozzkaPonuky.html">PoložkaPonuky</a></code>:
-
-<code><a href="PolozzkaPonuky.html#klávesováSkratka-int-int-">klávesováSkratka</a></code>, 
-
-(metóda nebrala do úvahy druhý parameter), 
-<code><a href="Bod.html">Bod</a></code>
-:
-<code><a href="Bod.html#posuň-double-double-">posuň</a></code>, 
-a 
-<code><a href="Bod.html#posuň-Poloha-">posuň</a></code>, 
-(metódy omylom nastavovali absolútne súradnice bodu).</li>
+<li>Oprava chýb v metóde triedy <code><a href="PolozzkaPonuky.html">PoložkaPonuky</a></code>: <code><a href="PolozzkaPonuky.html#klávesováSkratka-int-int-">klávesováSkratka</a></code> (metóda nebrala do úvahy druhý parameter), triedy <code><a href="Bod.html">Bod</a></code>: <code><a href="Bod.html#posuň-double-double-">posuň</a></code> a <code><a href="Bod.html#posuň-Poloha-">posuň</a></code> (metódy omylom nastavovali absolútne súradnice bodu).</li>
 
 
 <li><b>Pozor, zmena‼</b> Metódy <code><a href="GRobot.html#choďPoOblúku-double-double-">choďPoOblúku</a></code>
 a <code><a href="GRobot.html#skočPoOblúku-double-double-">skočPoOblúku</a></code> sa počnúc touto verziou predvolene otáčajú doľava (predvolený smer otáčania je predsa ľavotočivý – proti smeru hodinových ručičiek). Boli pridané ďalšie metódy na pohyb po oblúku:
 
-<code><a href="GRobot.html#choďPoOblúku-double-">choďPoOblúku</a></code>, 
-<code><a href="GRobot.html#choďPoOblúku-double-boolean-">choďPoOblúku</a></code>, 
-<code><a href="GRobot.html#choďPoOblúku--">choďPoOblúku</a></code>, 
-<code><a href="GRobot.html#choďPoOblúku-boolean-">choďPoOblúku</a></code>, 
-<code><a href="GRobot.html#skočPoOblúku-double-">skočPoOblúku</a></code>, 
-<code><a href="GRobot.html#skočPoOblúku-double-boolean-">skočPoOblúku</a></code>, 
-<code><a href="GRobot.html#skočPoOblúku--">skočPoOblúku</a></code>, 
+<code><a href="GRobot.html#choďPoOblúku-double-">choďPoOblúku</a></code>,
+<code><a href="GRobot.html#choďPoOblúku-double-boolean-">choďPoOblúku</a></code>,
+<code><a href="GRobot.html#choďPoOblúku--">choďPoOblúku</a></code>,
+<code><a href="GRobot.html#choďPoOblúku-boolean-">choďPoOblúku</a></code>,
+<code><a href="GRobot.html#skočPoOblúku-double-">skočPoOblúku</a></code>,
+<code><a href="GRobot.html#skočPoOblúku-double-boolean-">skočPoOblúku</a></code>,
+<code><a href="GRobot.html#skočPoOblúku--">skočPoOblúku</a></code>,
 <code><a href="GRobot.html#skočPoOblúku-boolean-">skočPoOblúku</a></code>.</li>
 
 
-<li>Robot má nové vlastnosti: <code><a href="GRobot.html#pomer--">pomer</a></code>,
-<code><a href="GRobot.html#zaoblenieX--">zaoblenieX</a></code>, 
-<code><a href="GRobot.html#zaoblenieY--">zaoblenieY</a></code> a novú metódu 
-<code><a href="GRobot.html#pasívny--">pasívny</a></code>.</li>
+<li>Robot má nové vlastnosti: <code><a href="GRobot.html#pomer--">pomer</a></code>, <code><a href="GRobot.html#zaoblenieX--">zaoblenieX</a></code>, <code><a href="GRobot.html#zaoblenieY--">zaoblenieY</a></code> a novú metódu <code><a href="GRobot.html#pasívny--">pasívny</a></code>.</li>
 
 
 <li>Pribudli nové metódy triedy <code><a href="Bod.html">Bod</a></code>: <code><a href="Bod.html#posuň-double-double-">posuň</a></code>, <code><a href="Bod.html#posuňVSmere-double-double-">posuňVSmere</a></code>.</li>
@@ -320,40 +327,34 @@ a <code><a href="GRobot.html#skočPoOblúku-double-double-">skočPoOblúku</a><
 <li>V triede <code><a href="Plaatno.html">Plátno</a></code> pribudli metódy: <code><a href="Plaatno.html#prepíšBod-Poloha-Color-">prepíšBod</a></code> a <code><a href="Plaatno.html#prepíšBodNaMyši-Color-">prepíšBodNaMyši</a></code></li>
 
 
-<li>Robot získal možnosť naplánovania automatickej aktivácie počas trvania stavu pasivity; okrem nových verzií metód
-
-<code><a href="GRobot.html#deaktivuj-int-boolean-">deaktivuj</a></code>, 
-<code><a href="GRobot.html#zastav-int-boolean-">zastav</a></code>, 
-
-boli zároveň pridané dve samostatné metódy <code><a href="GRobot.html#trvaniePasivity--">trvaniePasivity</a>()</code> a <code><a href="GRobot.html#trvaniePasivity-int-">trvaniePasivity</a>(čas)</code>,</li>
+<li>Robot získal možnosť naplánovania automatickej aktivácie počas trvania stavu pasivity; okrem nových verzií metód <code><a href="GRobot.html#deaktivuj-int-boolean-">deaktivuj</a></code> a <code><a href="GRobot.html#zastav-int-boolean-">zastav</a></code> boli zároveň pridané dve samostatné metódy <code><a href="GRobot.html#trvaniePasivity--">trvaniePasivity</a>()</code> a <code><a href="GRobot.html#trvaniePasivity-int-">trvaniePasivity</a>(čas)</code>.</li>
 
 
 <li>Boli pridané nové udalosti (a všetko s nimi súvisiace) <code><a href="ObsluhaUdalostii.html#maximalizovanie--">maximalizovanie</a></code>,<code><a href="ObsluhaUdalostii.html#minimalizovanie--">minimalizovanie</a></code>,<code><a href="ObsluhaUdalostii.html#obnovenie--">obnovenie</a></code>,<code><a href="ObsluhaUdalostii.html#otvorenie--">otvorenie</a></code>, <code><a href="ObsluhaUdalostii.html#zavretie--">zavretie</a></code>, a <code><a href="ObsluhaUdalostii.html#zatvorenie--">zatvorenie</a></code>.</li>
 
 
 <li>Boli vykonané rôzne opravy dotýkajúce sa rôznych metód v rôznych triedach, ako
-<code><a href="Obraazok.html#priečinokObrázkov--">priečinokObrázkov</a></code>, 
-<code><a href="Zvuk.html#priečinokZvukov--">priečinokZvukov</a></code>, 
+<code><a href="Obraazok.html#priečinokObrázkov--">priečinokObrázkov</a></code>,
+<code><a href="Zvuk.html#priečinokZvukov--">priečinokZvukov</a></code>,
 
-<code><a href="Zoznam.html#aktuálny--">aktuálny</a></code>, 
+<code><a href="Zoznam.html#aktuálny--">aktuálny</a></code>,
 <code><a href="Zoznam.html#tento--">tento</a></code>…</li>
 
 
 <li>Boli pridané dve nové reakcie, ktoré sa ukázali byť užitočné: <code><a href="GRobot.html#zobrazenie--">zobrazenie</a></code>, <code><a href="GRobot.html#skrytie--">skrytie</a></code>.</li>
 
 
-<li>Bola pridaná skupina metód na prácu s cieľom robota ako s alternatívnou polohou: <code><a href="GRobot.html#smerNaCieľ--">smerNaCieľ</a></code>, 
-<code><a href="GRobot.html#uholNaCieľ--">uholNaCieľ</a></code>, 
-<code><a href="GRobot.html#choďNaCieľ--">choďNaCieľ</a></code>, 
-<code><a href="GRobot.html#skočNaCieľ--">skočNaCieľ</a></code>, 
+<li>Bola pridaná skupina metód na prácu s cieľom robota ako s alternatívnou polohou: <code><a href="GRobot.html#smerNaCieľ--">smerNaCieľ</a></code>,
+<code><a href="GRobot.html#uholNaCieľ--">uholNaCieľ</a></code>,
+<code><a href="GRobot.html#choďNaCieľ--">choďNaCieľ</a></code>,
+<code><a href="GRobot.html#skočNaCieľ--">skočNaCieľ</a></code>,
 <code><a href="GRobot.html#otočNaCieľ--">otočNaCieľ</a></code>.</li>
 
 
 <li>Trieda <code><a href="Svet.html">Svet</a></code> má ďalšie nové schopnosti. Odteraz dokáže permanentne poskytovať svoj hlavný panel (v minulých verziách bola táto schopnosť poskytovaná len dočasne na testovacie účely) a dokáže lepšie pracovať s oknom: <code><a href="Svet.html#hlavnýPanel--">hlavnýPanel</a></code>, <code><a href="Svet.html#maximalizovaný--">maximalizovaný</a></code>, <code><a href="Svet.html#maximalizuj--">maximalizuj</a></code>, <code><a href="Svet.html#minimalizovaný--">minimalizovaný</a></code>, <code><a href="Svet.html#minimalizuj--">minimalizuj</a></code>, <code><a href="Svet.html#normálny--">normálny</a></code>, <code><a href="Svet.html#obnov--">obnov</a></code>, <code><a href="Svet.html#titulok--">titulok</a></code>, <code><a href="Svet.html#titulok-java.lang.String-">titulok</a></code>, <code><a href="Svet.html#premiestniNaZariadenie--">premiestniNaZariadenie</a></code>, (<code><a href="Svet.html#premiestniNaObrazovku--">premiestniNaObrazovku</a></code>).
 
-Okrem toho pribudlo niekoľko metód na prácu so skriptami a režimom ladenia <code><a href="Svet.html#vymažPremennú-java.lang.String-java.lang.Class-">vymažPremennú</a></code>, <code><a href="Svet.html#nahrajSkript-java.lang.String-java.lang.String-">nahrajSkript</a></code>, <code><a href="Svet.html#vyrobSkript-java.lang.String-boolean-">vyrobSkript</a></code>, <code><a href="Svet.html#registrujSkript-java.lang.String-java.lang.String-">registrujSkript</a></code>, <code><a href="Svet.html#dajSkript-java.lang.String-">dajSkript</a></code>, <code><a href="Svet.html#volajSkript-java.lang.String-">volajSkript</a></code>, <code><a href="Svet.html#riadokPoslednejChyby--">riadokPoslednejChyby</a></code>, 
-
-<code><a href="Svet.html#textChyby-int-">textChyby</a></code> (tá bola síce plánovaná od začiatku, ale akosi sa na ňu „pozabudlo“).
+Okrem toho pribudlo niekoľko metód na prácu so skriptami a režimom ladenia <code><a href="Svet.html#vymažPremennú-java.lang.String-java.lang.Class-">vymažPremennú</a></code>, <code><a href="Svet.html#nahrajSkript-java.lang.String-java.lang.String-">nahrajSkript</a></code>, <code><a href="Svet.html#vyrobSkript-java.lang.String-boolean-">vyrobSkript</a></code>, <code><a href="Svet.html#registrujSkript-java.lang.String-java.lang.String-">registrujSkript</a></code>, <code><a href="Svet.html#dajSkript-java.lang.String-">dajSkript</a></code>, <code><a href="Svet.html#volajSkript-java.lang.String-">volajSkript</a></code>, <code><a href="Svet.html#riadokPoslednejChyby--">riadokPoslednejChyby</a></code>
+a <code><a href="Svet.html#textChyby-int-">textChyby</a></code> (tá bola síce plánovaná od začiatku, ale akosi sa na ňu „pozabudlo“).
 
 Metódy na prevod medzi celými číslami a rímskymi číslicami: <code><a href="Svet.html#celéNaRímske-long-">celéNaRímske</a></code>, <code><a href="Svet.html#rímskeNaCelé-java.lang.String-">rímskeNaCelé</a></code>.
 
@@ -361,38 +362,37 @@ Metóda na zaokrúhľovanie hodnôt: <code><a href="Svet.html#zaokrúhli-double-
 
 Metódy na pozastavenie činnosti aplikácie s čakaním na niektorú z udalostí vstupu: <code><a href="Svet.html#čakajNaKláves--">čakajNaKláves</a></code>, <code><a href="Svet.html#čakajNaKlik--">čakajNaKlik</a></code>, <code><a href="Svet.html#čakajNaKlávesAleboKlik--">čakajNaKlávesAleboKlik</a></code>…
 
-Široký súbor metód na prácu s geometriou: 
-<code><a href="Svet.html#smer-double-double-">smer</a></code>, 
-<code><a href="Svet.html#uhol-double-double-">uhol</a></code>, 
+Široký súbor metód na prácu s geometriou:
+<code><a href="Svet.html#smer-double-double-">smer</a></code>,
+<code><a href="Svet.html#uhol-double-double-">uhol</a></code>,
 
-<code><a href="Svet.html#kvadratickáAproximácia-double-double-double-double-">kvadratickáAproximácia</a></code>, 
+<code><a href="Svet.html#kvadratickáAproximácia-double-double-double-double-">kvadratickáAproximácia</a></code>,
 
 <code><a href="Svet.html#kvadratickáInterpolácia-double-double-double-double-">kvadratickáInterpolácia</a></code>,
 
 (poznámka: <code><a href="Svet.html#kubickáInterpolácia-double-double-double-double-double-">kubickáInterpolácia</a></code> bola z dôvodu nesprávne použitej terminológie premenovaná na <code><a href="Svet.html#kubickáAproximácia-double-double-double-double-double-">kubickáAproximácia</a></code> a vznikla nová verzia metódy <code><a href="Svet.html#kubickáInterpolácia-double-double-double-double-double-">kubickáInterpolácia</a></code>),
 
-<code><a href="Svet.html#priesečníkÚsečiek-double-double-double-double-double-double-double-double-">priesečníkÚsečiek</a></code>, 
-<code><a href="Svet.html#priesečníkPriamok-double-double-double-double-double-double-double-double-">priesečníkPriamok</a></code>, 
-<code><a href="Svet.html#priesečníkyKružníc-double-double-double-double-double-double-">priesečníkyKružníc</a></code>, 
-<code><a href="Svet.html#priesečníkyPriamkyAKružnice-double-double-double-double-double-double-double-">priesečníkyPriamkyAKružnice</a></code>, 
-<code><a href="Svet.html#priesečníkyÚsečkyAKružnice-double-double-double-double-double-double-double-">priesečníkyÚsečkyAKružnice</a></code>, 
-<code><a href="Svet.html#najbližšíBodNaPriamke-double-double-double-double-double-double-">najbližšíBodNaPriamke</a></code>, 
-<code><a href="Svet.html#najbližšíBodNaÚsečke-double-double-double-double-double-double-">najbližšíBodNaÚsečke</a></code>, 
-<code><a href="Svet.html#najbližšíBodNaKružnici-double-double-double-double-double-">najbližšíBodNaKružnici</a></code>, 
-<code><a href="Svet.html#vzdialenosťBoduOdPriamky-double-double-double-double-double-double-">vzdialenosťBoduOdPriamky</a></code>, 
-<code><a href="Svet.html#vzdialenosťBoduOdÚsečky-double-double-double-double-double-double-">vzdialenosťBoduOdÚsečky</a></code>, 
-<code><a href="Svet.html#vzdialenosťBoduOdKružnice-double-double-double-double-double-">vzdialenosťBoduOdKružnice</a></code>, 
-<code><a href="Svet.html#vzdialenosťKružníc-double-double-double-double-double-double-">vzdialenosťKružníc</a></code>, 
-<code><a href="Svet.html#vzdialenosťÚsečiek-double-double-double-double-double-double-double-double-">vzdialenosťÚsečiek</a></code>, 
-<code><a href="Svet.html#vzdialenosťPriamkyOdKružnice-double-double-double-double-double-double-double-">vzdialenosťPriamkyOdKružnice</a></code>, 
-<code><a href="Svet.html#vzdialenosťÚsečkyOdKružnice-double-double-double-double-double-double-double-">vzdialenosťÚsečkyOdKružnice</a></code>, 
+<code><a href="Svet.html#priesečníkÚsečiek-double-double-double-double-double-double-double-double-">priesečníkÚsečiek</a></code>,
+<code><a href="Svet.html#priesečníkPriamok-double-double-double-double-double-double-double-double-">priesečníkPriamok</a></code>,
+<code><a href="Svet.html#priesečníkyKružníc-double-double-double-double-double-double-">priesečníkyKružníc</a></code>,
+<code><a href="Svet.html#priesečníkyPriamkyAKružnice-double-double-double-double-double-double-double-">priesečníkyPriamkyAKružnice</a></code>,
+<code><a href="Svet.html#priesečníkyÚsečkyAKružnice-double-double-double-double-double-double-double-">priesečníkyÚsečkyAKružnice</a></code>,
+<code><a href="Svet.html#najbližšíBodNaPriamke-double-double-double-double-double-double-">najbližšíBodNaPriamke</a></code>,
+<code><a href="Svet.html#najbližšíBodNaÚsečke-double-double-double-double-double-double-">najbližšíBodNaÚsečke</a></code>,
+<code><a href="Svet.html#najbližšíBodNaKružnici-double-double-double-double-double-">najbližšíBodNaKružnici</a></code>,
+<code><a href="Svet.html#vzdialenosťBoduOdPriamky-double-double-double-double-double-double-">vzdialenosťBoduOdPriamky</a></code>,
+<code><a href="Svet.html#vzdialenosťBoduOdÚsečky-double-double-double-double-double-double-">vzdialenosťBoduOdÚsečky</a></code>,
+<code><a href="Svet.html#vzdialenosťBoduOdKružnice-double-double-double-double-double-">vzdialenosťBoduOdKružnice</a></code>,
+<code><a href="Svet.html#vzdialenosťKružníc-double-double-double-double-double-double-">vzdialenosťKružníc</a></code>,
+<code><a href="Svet.html#vzdialenosťÚsečiek-double-double-double-double-double-double-double-double-">vzdialenosťÚsečiek</a></code>,
+<code><a href="Svet.html#vzdialenosťPriamkyOdKružnice-double-double-double-double-double-double-double-">vzdialenosťPriamkyOdKružnice</a></code>,
+<code><a href="Svet.html#vzdialenosťÚsečkyOdKružnice-double-double-double-double-double-double-double-">vzdialenosťÚsečkyOdKružnice</a></code>,
 
 Do sveta tiež pribudla možnosť aktivácie štandardného vstupu (konzolového/textového režimu), ktorý je presmerovateľný, takže aplikácie teraz dokážu komunikovať aj s konzolou:
-<code><a href="Svet.html#aktivujŠtandardnýVstup--">aktivujŠtandardnýVstup</a></code>, 
-<code><a href="Svet.html#štandardnýVstupAktívny--">štandardnýVstupAktívny</a></code>, 
-<code><a href="Svet.html#čakajNaVstup--">čakajNaVstup</a></code>, 
-. K nim pribudli prislúchajúce reakcie <a href="ObsluhaUdalostii.html">obsluhy udalostí</a>: 
-<code><a href="ObsluhaUdalostii.html#spracujRiadokVstupu-java.lang.String-">spracujRiadokVstupu</a></code>, 
+<code><a href="Svet.html#aktivujŠtandardnýVstup--">aktivujŠtandardnýVstup</a></code>,
+<code><a href="Svet.html#štandardnýVstupAktívny--">štandardnýVstupAktívny</a></code>,
+<code><a href="Svet.html#čakajNaVstup--">čakajNaVstup</a></code>. K nim pribudli prislúchajúce reakcie <a href="ObsluhaUdalostii.html">obsluhy udalostí</a>:
+<code><a href="ObsluhaUdalostii.html#spracujRiadokVstupu-java.lang.String-">spracujRiadokVstupu</a></code>,
 <code><a href="ObsluhaUdalostii.html#koniecVstupu--">koniecVstupu</a></code>.
 
 Rôzne doplnkové metódy k vyššie spomínaným, ale aj samostatné, napríklad: <code><a href="Svet.html#názovKonfiguračnéhoSúboru--">názovKonfiguračnéhoSúboru</a></code>, <code><a href="Svet.html#spracujPríkaz-java.lang.String-">spracujPríkaz</a></code>, <code><a href="Svet.html#príkazovýRiadok">príkazovýRiadok</a></code>…</li>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- DOCTYPE html -->
+<html lang="sk">
+<head>
+<!-- Template source: javadoc -->
+<title>Kategórie metód</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script type="text/javascript" src="script.js"></script>
+<!-- Translated and extended by RoboDoc -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- meta charset="UTF-8" / -->
+</head>
+<body>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="Kategórie metód";
+        }
+    }
+    catch(err) {
+    }
+//-->
+</script>
+<noscript>
+<div>Vo Vašom prehliadači je vypnutý JavaScript.</div>
+</noscript>
+
+<!-- ========= start of top navbar ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Preskočiť navigáciu">Preskočiť navigáciu</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="index.html">Úvod</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><!-- Neaktívny odkaz „Predchádzajúce“ zrušený --></li>
+<li><!-- Neaktívny odkaz „Ďalšie“ zrušený --></li>
+</ul>
+<ul class="navList">
+<!-- Odkaz „Rámy“ zrušený -->
+<!-- Odkaz „Bez rámov“ zrušený -->
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<!-- Odkaz „Všetky triedy“ zrušený -->
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allTriedyLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allTriedyLink.style.display = "block";
+  }
+  else {
+    allTriedyLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= end of top navbar ========= -->
+
+
+
+<!-- ======== start of data ======== -->
+<div class="header">
+<h2>Kategórie metód</h2>
+
+<p>Metódy nasledujúcich tried sú v tomto súbore rozdelené do kategórií:</p>
+
+</div>
+
+$CLASSLIST

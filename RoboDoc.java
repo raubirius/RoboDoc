@@ -11,7 +11,7 @@ RegEx konverzia dokumentácie do PHP (so zamlčanou príponou):
 Filter:
 *.php
 Priečinok:
-C:\_Sync\Vyucba\Materialy\@Robot\Vývoj\robodoc\class-use\
+C:\_Sync\Vyucba\Materialy\@Robot\RoboDoc\robodoc\class-use\
 
 
 Dočasné (dúfam) v podpriečinku class-use:
@@ -1995,6 +1995,15 @@ public class RoboDoc extends GRobot
 
 	private RoboDoc()
 	{
+		if (!Súbor.existuje(priečinok))
+		{
+			if (new java.io.File(priečinok).mkdir())
+				System.out.println("Priečinok " + priečinok + " vytvorený…");
+			else
+				System.out.println("Vytvorenie priečinka " + priečinok +
+					" zlyhalo…");
+		}
+
 		/* * /
 		System.out.println("OS Name: " + System.getProperty("os.name"));
 		System.out.println("OS Architecture: " + System.getProperty("os.arch"));
@@ -2065,14 +2074,14 @@ public class RoboDoc extends GRobot
 				"-noindex -notree -nohelp " + // -nonavbar 
 				"-exclude podpora apacheAntZIP " +
 				"-link https://docs.ORACLE.com/javase/8/docs/api/ " +
-				"-d " + priečinok + " -encoding UTF-8 " +
+				"-d ../RoboDoc/" + priečinok + " -encoding UTF-8 " +
 				"-docencoding UTF-8 knižnica " + // GRobot.java
 				"-notimestamp -nodeprecatedlist " +
 				"-Xdoclint:-html " +
 				"--allow-script-in-comments " +
 				// accessibility, html, missing, reference, or syntax
-				"-stylesheetfile stylesheet.css" +
-				classPath);
+				"-stylesheetfile stylesheet.css " +
+				"-cp ../GRobot;" + classPath);
 			/* */
 
 
@@ -2184,23 +2193,14 @@ public class RoboDoc extends GRobot
 			}
 		}
 
-		if (!Súbor.existuje(priečinok))
-		{
-			if (new java.io.File(priečinok).mkdir())
-				System.out.println("Priečinok " + priečinok + " vytvorený…");
-			else
-				System.out.println("Vytvorenie priečinka " +
-					priečinok + " zlyhalo…");
-		}
-
 		if (!Súbor.existuje(priečinok + separator + "class-use"))
 		{
 			if (new java.io.File(priečinok + separator + "class-use").mkdir())
-				System.out.println("Priečinok " + priečinok +
-					"class-use" + " vytvorený…");
+				System.out.println("Priečinok " + priečinok + "class-use" +
+					" vytvorený…");
 			else
-				System.out.println("Vytvorenie priečinka " +
-					priečinok + separator + "class-use" + " zlyhalo…");
+				System.out.println("Vytvorenie priečinka " + priečinok +
+					separator + "class-use" + " zlyhalo…");
 		}
 
 		String[] zoznam = null;
@@ -3977,7 +3977,9 @@ public class RoboDoc extends GRobot
 
 		Svet.skry();
 		new RoboDoc();
+
 		poslednéPrevody(); // Finalizácia (implementovaná nižšie).
+
 		} finally { Svet.koniec(); }
 	}
 

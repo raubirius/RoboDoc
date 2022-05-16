@@ -1,0 +1,3 @@
+<tr class="category">
+<th colspan="2"><h4><a name="$CATEGORYID">$CATEGORY</a></h4></th>
+</tr>

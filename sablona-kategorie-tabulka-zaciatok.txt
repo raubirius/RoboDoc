@@ -1,0 +1,25 @@
+<div class="contentContainer">
+<div class="summary">
+
+
+<ul class="blockList">
+<li class="blockList">
+
+<ul class="blockList">
+<li class="blockList">
+
+
+<h3><a name="$CLASSID">Trieda <a href="$COREFILENAME">$CLASSNAME</a></a></h3>
+
+<p>Metódy tejto triedy sú rozdelené do nasledujúcich kategórií:</p>
+
+$CATEGORYLIST
+
+<p> </p>
+
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Tabuľka prehľadu metód, výpis metód a ich stručný opis">
+
+<tr>
+<th class="colFirst" scope="col">Modifikátor a typ</th>
+<th class="colLast" scope="col">Metóda a opis</th>
+</tr>

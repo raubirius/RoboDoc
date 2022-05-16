@@ -1,0 +1,15 @@
+Zmaž opis:
+^[^\n\t]+$\n
+
+Zmaž príznaky a tabulátor:
+^[^\n\t]+\t
+
+Zmaž parametre:
+\(.*\)
+
+(Pridaj dva tabulátory)
+
+
+Trieda
+	Ignorované
+		-end-

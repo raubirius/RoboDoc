@@ -1,0 +1,54 @@
+
+
+<div class="details">
+<div class="block">
+
+<!--p>TEXT</p-->
+
+</div></div>
+<!-- ========= end of data ========= -->
+
+
+<!-- ======= start of bottom navbar ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Preskočiť navigáciu">Preskočiť navigáciu</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="index.html">Úvod</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><!-- Neaktívny odkaz „Predchádzajúce“ zrušený --></li>
+<li><!-- Neaktívny odkaz „Ďalšie“ zrušený --></li>
+</ul>
+<ul class="navList">
+<!-- Odkaz „Rámy“ zrušený -->
+<!-- Odkaz „Bez rámov“ zrušený -->
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<!-- Odkaz „Všetky triedy“ zrušený -->
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allTriedyLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allTriedyLink.style.display = "block";
+  }
+  else {
+    allTriedyLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== end of bottom navbar ======= -->
+
+</body>
+</html>

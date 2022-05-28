@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540">
+<title>SVG tvary generované programovacím rámcom Programovací rámec GRobot 2.14 (2022-05-16), © 2010 – 2022, Roman Horváth</title>
+<defs>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="400.0" cy="270.0" fill="none" r="130.0" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" />
+  <line fill="none" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" x1="453.84776310850236" x2="270.0" y1="86.15223689149764" y2="270.0" />
+  <circle cx="270.0" cy="270.0" fill="none" r="260.0" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" />
+  <line fill="none" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" x1="270.0" x2="530.0" y1="270.0" y2="270.0" />
+  <circle cx="530.0" cy="270.0" fill="none" r="260.0" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" />
+  <line fill="none" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" x1="530.0" x2="346.15223689149764" y1="270.0" y2="86.15223689149764" />
+  <circle cx="400.0" cy="140.0" fill="none" r="76.15223689149765" stroke="#909090" stroke-dasharray="5.0 5.0" stroke-width="0.5px" />
+  <path d="M 270.0, 270.0
+    L 270.0, 269.99999999999994
+    C 270.0, 201.04371264171846  297.3927784950082, 134.9116952879863  346.1522368914967, 86.15223689149661" fill="none" stroke="#f0b400" stroke-width="3.25px" />
+  <path d="M 346.1522368914967, 86.15223689149659
+    L 346.1522368914967, 86.15223689149656
+    C 360.433551608845, 71.8709221741479  379.8031710382069, 63.8477631085008  399.9999999999996, 63.847763108501056
+    C 420.19682896179233, 63.84776310850131  439.56644839115404, 71.87092217414894  453.84776310850197, 86.15223689149795" fill="none" stroke="#0000e0" stroke-width="3.25px" />
+  <path d="M 453.84776310850197, 86.15223689149798
+    L 453.8477631085022, 86.15223689149818
+    C 502.60722150498873, 134.91169528798855  529.9999999999973, 201.04371264171897  530.000000000001, 269.9999999999996" fill="none" stroke="#f0b400" stroke-width="3.25px" />
+  <path d="M 530.0000000000009, 269.9999999999996
+    L 530.0000000000009, 269.9999999999997
+    C 530.0000000000034, 316.44452668806275  505.22213997860933, 359.36103914795063  465.0000000000028, 382.5833024919829
+    C 424.7778600213963, 405.8055658360152  375.22213997860496, 405.80556583601526  334.99999999999835, 382.5833024919831
+    C 294.7778600213917, 359.3610391479508  269.9999999999975, 316.444526688063  270.0, 269.9999999999999" fill="none" stroke="#e00000" stroke-width="3.25px" />
+  <circle cx="270.0" cy="270.0" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 230.0, 269.9999999999979)" x="216.5" y="281.9999999999979" >A</text>
+  <circle cx="530.0" cy="270.0" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 570.0, 270.00000000000205)" x="556.5" y="282.00000000000205" >B</text>
+  <circle cx="400.0" cy="140.0" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 400.00000000000153, 110.0)" x="385.50000000000153" y="122.0" >C</text>
+  <circle cx="346.15223689149764" cy="86.15223689149764" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 306.15223689149815, 76.15223689149556)" x="291.65223689149815" y="88.15223689149556" >D</text>
+  <circle cx="453.84776310850236" cy="86.15223689149764" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 493.8477631085029, 76.15223689149971)" x="480.3477631085029" y="88.15223689149971" >E</text>
+  <circle cx="400.0" cy="270.0" fill="black" r="3.0" />
+  <text fill="black" font-family="Arial" font-size="40.0px" transform="rotate(2.9558577807620168E-12, 399.99999999999847, 300.0)" x="386.49999999999847" y="312.0" >S</text>
+</g>
+</svg>

@@ -129,15 +129,21 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 <div class="block">
 
 
-<h3>Verzia 2.14 (v procese vývoja) – ??? 13. máj 2022</h3>
+<h3>Verzia 2.14 (v procese vývoja) – ??? 28. máj 2022</h3>
 
 <p>(pracuje sa)</p>
 
 <ul>
 
+<li>Pribudla hromada metód pracujúca so vzorom čiary. Pozri napríklad: <code><a href="GRobot.html#vzorČiary-double-double...-">vzorČiary</a>(začiatokVzoru, pokračovanieVzoru)</code>.</li>
+
+<!-- li>Metóda <code><a href="GRobot.html#vlastnýTvar-KreslenieTvaru-">vlastnýTvar</a>(tvar)</code> bola upravená tak, aby keď je zadaný parameter <code class="value">null</code> nasmerovala kreslenie do metódy <code><a href="GRobot.html#kresliTvar--">kresliTvar</a>()</code>, ak je táto prekrytá. Rovnaké správanie mali doteraz len metódy nastavujúce predvolený tvar (ako <code><a href="GRobot.html#predvolenýTvar--">predvolenýTvar</a>()</code> a príbuzné).</li ZRUŠENÉ – nebolo to považované za bug, ale feature… -->
+
+<li>Bol zdokonalený mechanizmus pridávania tvarov do SVG podpory a pribudla nová metóda: <code><a href="SVGPodpora.html">SVGPodpora</a></code>.<code><a href="SVGPodpora.html#pridajÚsečku-GRobot-java.lang.String...-">pridajÚsečku</a>(tvorca, atribúty)</code>.</li>
+
 <li>Pridané metódy triedy <code><a href="Svet.html">Svet</a></code>: <code><a href="Svet.html#násobTiky--">násobTiky</a></code>, <code><a href="Svet.html#čísloTiku--">čísloTiku</a></code>, <code><a href="Svet.html#tik--">tik</a></code>.</li>
 
-<li>Pridané metódy triedy <code><a href="GRobot.html">GRobot</a></code>: <code><a href="GRobot.html#vypniOhraničenie--">vypniOhraničenie</a></code>, <code><a href="GRobot.html#zapniOhraničenie--">zapniOhraničenie</a></code>.</li>
+<li>Pridané metódy triedy <code><a href="GRobot.html">GRobot</a></code>: <code><a href="GRobot.html#vypniOhraničenie--">vypniOhraničenie</a></code>, <code><a href="GRobot.html#zapniOhraničenie--">zapniOhraničenie</a></code> a jedna „špeciálna“ („vyčnievajúca“) metóda <code><a href="GRobot.html#vajce-double-java.lang.String...-">vajce</a></code>.</li>
 
 </ul>
 
@@ -152,7 +158,7 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 
 <li>Triedy <code><a href="PoznaamkovyyBlok.html">PoznámkovýBlok</a></code> a <code><a href="Tlaccidlo.html">Tlačidlo</a></code> teraz implementujú rozhranie <code><a href="Rozmer.html">Rozmer</a></code>.</li>
 
-<li>Boli skorigované metódy triedy <code><a href="Svet.html">Svet</a></code>: <code><a href="Svet.html#reťazecNaCeléČíslo-String-">reťazecNaCeléČíslo</a></code>, <code><a href="Svet.html#reťazecNaReálneČíslo-String-">reťazecNaReálneČíslo</a></code>. Teraz sú schopné prijať aj prázdny reťazec alebo reťazec s hodnotou <code class="value">null</code>.</li>
+<li>Boli skorigované metódy triedy <code><a href="Svet.html">Svet</a></code>: <code><a href="Svet.html#reťazecNaCeléČíslo-java.lang.String-">reťazecNaCeléČíslo</a></code>, <code><a href="Svet.html#reťazecNaReálneČíslo-java.lang.String-">reťazecNaReálneČíslo</a></code>. Teraz sú schopné prijať aj prázdny reťazec alebo reťazec s hodnotou <code class="value">null</code>.</li>
 
 <li>Metódy triedy <code><a href="PoznaamkovyyBlok.html">PoznámkovýBlok</a></code>: <code><a href="PoznaamkovyyBlok.html#zarovnať-int-">zarovnať</a></code>, <code><a href="PoznaamkovyyBlok.html#režimZobrazeniaRolovacíchLíšt--">režimZobrazeniaRolovacíchLíšt</a></code>, <code><a href="PoznaamkovyyBlok.html#rolovanie--">rolovanie</a></code> boli buď pridané alebo opravené (revízia zoznamu zmien bola vykonaná až s ročným oneskorením).</li>
 
@@ -176,8 +182,8 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 <code><a href="GRobot.html#spojniceDo--">spojniceDo</a></code>,
 <code><a href="GRobot.html#súSpojniceZ--">súSpojniceZ</a></code>,
 <code><a href="GRobot.html#súSpojniceDo--">súSpojniceDo</a></code>,
-<code><a href="GRobot-Spojnica.html#parameter-String-">parameter</a></code>,
-<code><a href="GRobot-Spojnica.html#parameter-String-Object-">parameter</a></code>.</li>
+<code><a href="GRobot-Spojnica.html#parameter-java.lang.String-">parameter</a></code>,
+<code><a href="GRobot-Spojnica.html#parameter-java.lang.String-java.lang.Object-">parameter</a></code>.</li>
 
 <p>Opravy:</p>
 
@@ -191,7 +197,7 @@ tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu).</li></ul>
 <h3>Verzia 2.10 – <del>24. februára 2021</del> 27. júla 2021</h3>
 
 <ul>
-<li>Novinky: <code><a href="Svet.html#pridajVnorenúPonuku-String-JMenuItem...-">pridajVnorenúPonuku</a></code>, <code><a href="Svet.html#nespi--">nespi</a></code>.</li>
+<li>Novinky: <code><a href="Svet.html#pridajVnorenúPonuku-java.lang.String-javax.swing.JMenuItem...-">pridajVnorenúPonuku</a></code>, <code><a href="Svet.html#nespi--">nespi</a></code>.</li>
 
 <li>Pridaná trieda: <code><a href="Tlacc.html">Tlač</a></code>.</li>
 
@@ -202,10 +208,9 @@ tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu).</li></ul>
 <code><a href="GRobot.html#skončiKreslenie-java.awt.Graphics2D-">skončiKreslenie</a></code>,
 <code><a href="Svet.html#zavrieť--">zavrieť</a></code>
 (systém zatvárania aplikácie bol revidovaný),
-<code><a href="Plaatno.html#vypíšAktívneSlovo-String-Object[]-">vypíšAktívneSlovo</a></code> (niečo v rámci celého mechanizmu bolo opravené – nemusí ísť priamo o túto metódu; revízia zoznamu zmien bola vykonaná až s ročným oneskorením),
+<code><a href="Plaatno.html#vypíšAktívneSlovo-java.lang.String-java.lang.Object...-">vypíšAktívneSlovo</a></code> (niečo v rámci celého mechanizmu bolo opravené – nemusí ísť priamo o túto metódu; revízia zoznamu zmien bola vykonaná až s ročným oneskorením),
 <code><a href="PoznaamkovyyBlok.html#zakážTabulátor--">zakážTabulátor</a></code>,
-<code><a href="PoznaamkovyyBlok.html#zakážEnter--">zakážEnter</a></code>
-.</li>
+<code><a href="PoznaamkovyyBlok.html#zakážEnter--">zakážEnter</a></code>.</li>
 
 </ul><p>Plány začaté alebo navrhnuté pri tejto verzii:</p><ul>
 
@@ -215,7 +220,7 @@ tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu).</li></ul>
 
 </ul><p>Opravy:</p><ul>
 
-<li><code><a href="SVGPodpora.html#text-String-GRobot-String...-">text</a></code> rieši základné entity pre znaky: &amp;, &lt;, &gt;, &apos;, &quot;.</li>
+<li><code><a href="SVGPodpora.html#pridajText-java.lang.String-GRobot-java.lang.String...-">pridajText</a></code> odteraz rieši základné entity pre znaky: &amp;, &lt;, &gt;, &apos;, &quot;.</li>
 
 </ul>
 
@@ -241,7 +246,7 @@ tak, aby z obdĺžnika spravili elipsu a zo štvorca kružnicu).</li></ul>
 
 <li>Pridané metódy triedy <code><a href="Plaatno.html">Plátno</a></code> na prácu s virtuálnym tabulátorom textov vnútornej konzoly: <code><a href="Plaatno.html#virtuálnyTabulátor--">virtuálnyTabulátor</a>()</code>, <code><a href="Plaatno.html#virtuálnyTabulátor-java.lang.Integer-">virtuálnyTabulátor</a>(odsadenie)</code>.</li>
 
-<li>Pridané metódy <code><a href="Svet.html#jePrvočíslo-long-">jePrvočíslo</a></code>, <code><a href="Svet.htmlskratkyStropu#-boolean-">skratkyStropu</a></code> (a príbuzné).</li>
+<li>Pridané metódy <code><a href="Svet.html#jePrvočíslo-long-">jePrvočíslo</a></code>, <code><a href="Svet.html#skratkyStropu-boolean-">skratkyStropu</a></code> (a príbuzné).</li>
 
 <li>Metóda <code><a href="Svet.html#dialóg-java.lang.String:A-java.lang.Object:A-java.lang.String-">Svet.dialóg(popisy, údaje, titulok)</a></code> (a jej klony) teraz prijíma nový údajový typ <code><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true">Enum</a></code>, na základe ktorého vytvára skupiny rádiových tlačidiel.</li>
 
@@ -776,7 +781,7 @@ Svet.kresli();
 <li>pridané metódy <code><a href="Oblastt.html#alternatíva-java.awt.Shape-">Oblasť.alternatíva(tvar)</a></code>, <code><a href="Oblastt.html#šírka--">Oblasť.šírka()</a></code> a <code><a href="Oblastt.html#výška--">Oblasť.výška()</a></code>,</li>
 <li>opravená metóda <code><a href="Oblastt.html#prienik-java.awt.Shape-">Oblasť.prienik(tvar)</a></code> – metóda omylom vytvárala rozdiel oblastí,</li>
 <li>opravená séria metód <code><a href="GRobot.html#myšVOblasti-java.awt.geom.Area-">myšVOblasti</a>(Area)</code>, <code><a href="GRobot.html#bodVOblasti-double-double-java.awt.geom.Area-">bodVOblasti</a>(double, double, Area)</code> (v čase opravy prijímali argument typu  <code><a href="Oblastt.html">Oblasť</a></code> – v tom nebola chyba, až neskôr bola vykonaná zmena a metódy teraz prijímajú argument typu <code><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Area.html?is-external=true">Area</a></code> – pozri vyššie)</code>…,</li>
-<li>pridané metódy <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#porovnaj-java.lang.String-java.lang.String-">porovnaj</a></code>, <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vlastnosťJestvuje-java.awt.String-">vlastnosťJestvuje</a></code>, <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vymažVlastnosť-java.awt.String-">vymažVlastnosť</a></code> a <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vytvorPriečinok-java.lang.String-boolean-">vytvorPriečinok</a>(názov, ajRodičov)</code> (t. j. ďalšia verzia metódy); pridaná zvláštne zaobchádzanie s hodnotou <code class="value">null</code> pri čítaní a zápise vlastností; opravené viaceré chyby v triede <code><a href="Suubor.html">Súbor</a></code>,</li>
+<li>pridané metódy <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#porovnaj-java.lang.String-java.lang.String-">porovnaj</a></code>, <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vlastnosťJestvuje-java.lang.String-">vlastnosťJestvuje</a></code>, <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vymažVlastnosť-java.lang.String-">vymažVlastnosť</a></code> a <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vytvorPriečinok-java.lang.String-boolean-">vytvorPriečinok</a>(názov, ajRodičov)</code> (t. j. ďalšia verzia metódy); pridaná zvláštne zaobchádzanie s hodnotou <code class="value">null</code> pri čítaní a zápise vlastností; opravené viaceré chyby v triede <code><a href="Suubor.html">Súbor</a></code>,</li>
 <li>zlepšené previazanie súvisiacich metód v rámci dokumentácie, mnohé preformulovania a opravy chýb v dokumentácii,</li>
 <li>ďalšie nezaznamenané úpravy.</li>
 </ul>

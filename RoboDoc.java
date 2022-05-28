@@ -2122,7 +2122,9 @@ public class RoboDoc extends GRobot
 				// Ďalšie súbory (neprepisované automaticky):
 				for (String ďalší : new String[] {"apache-licence-2.0.html",
 					"rastlinka-svg.html", "JScrollBar.7z", "test-roja.7z",
-					"kolotoc-ikonky.7z", "vzdialenost-useciek.7z"})
+					"kolotoc-ikonky.7z", "vzdialenost-useciek.7z",
+					"graf-rad-2.pdf", "graf-rad-1.pdf", ".htaccess",
+					"uprav.bat"})
 				{
 					try
 					{
@@ -2177,6 +2179,28 @@ public class RoboDoc extends GRobot
 						}
 					}
 				}
+
+				if (!Súbor.jestvuje(priečinok + "/.htaccess"))
+				{
+					súbor.otvorNaZápis(priečinok + "/.htaccess");
+					súbor.zapíš("<FilesMatch \"^curver\\.txt$\">\n\t" +
+						"Allow from all\n</FilesMatch>");
+					súbor.zavri();
+
+					System.out.println("Súbor garantujúci prístup k súboru " +
+						"s aktuálnou verziou z webu bol vytvorený…");
+				}
+
+				/*if (Súbor.nejestvuje(priečinok + "/resources/.htaccess"))
+				{
+					súbor.otvorNaZápis(priečinok + "/resources/.htaccess");
+					súbor.zapíš("<FilesMatch \"\\.(svg|wav|7z)$\">\n\t" +
+						"Allow from all\n</FilesMatch>");
+					súbor.zavri();
+
+					System.out.println("Súbor garantujúci prístup k ďalším " +
+						"zdrojom z webu bol vytvorený…");
+				}*/
 
 				súbor.otvorNaZápis(priečinok + "/curver.txt");
 				súbor.zapíšRiadok(Konštanty.majorVersion + "." +

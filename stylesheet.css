@@ -4,6 +4,13 @@
 Overall document style
 */
 
+html
+{
+	/* https://youtu.be/iGUSTyG-CYw */
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-padding, 49px);
+}
+
 body
 {
 	background-color: #ffffff;

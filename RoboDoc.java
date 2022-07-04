@@ -1735,6 +1735,10 @@ public class RoboDoc extends GRobot
 		"<ul class=\"navList\" style=\"display: none\">",
 
 
+		"<body>",
+		"<body onload=\"onLoadPage()\">",
+
+
 		// Tieto pravidlá sú archivované, pretože ich originálne informácie
 		// (search strings) boli presunuté na úvodnú stránku:
 		// 
@@ -3949,7 +3953,8 @@ public class RoboDoc extends GRobot
 			if (classUse)
 			{
 				zápis = zápis
-					.replace("<body>", "<body><div style=\"background-" +
+					.replace("<body onload=\"onLoadPage()\">", "<body " +
+						"onload=\"onLoadPage()\"><div style=\"background-" +
 						"color: #fee; border: 2px solid red; color: #800; " +
 						"opacity: 0.95; margin: 0px; padding: 20px; " +
 						"position: fixed; top: 50px; right: 0px; z-index: " +

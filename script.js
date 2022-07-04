@@ -29,3 +29,13 @@ function updateTabs(type)
 		}
 	}
 }
+
+function onLoadPage()
+{
+	/* https://youtu.be/iGUSTyG-CYw */
+	const navigationHeight = document.querySelector(
+		'.bottomNav').offsetHeight;
+	// console.log(navigationHeight);
+	document.documentElement.style.setProperty(
+		'--scroll-padding', navigationHeight + 'px');
+}

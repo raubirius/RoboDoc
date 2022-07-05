@@ -1,5 +1,7 @@
 # RoboDoc
 
+*Slovenský text je nižšie (for Slovak scroll/look down).*
+
 This repository contains all files necessary to generate proper [GRobot framework](https://github.com/raubirius/GRobot) documentation. The last version of the documentation was [published here.](https://pdf.truni.sk/horvath/GRobot/)
 
 ## Slovenský text (Slovak description)…

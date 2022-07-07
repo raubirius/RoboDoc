@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- meta charset="UTF-8" / -->
 </head>
-<body>
+<body onload="onLoadPage()">
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {

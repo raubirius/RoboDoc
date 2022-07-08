@@ -2055,7 +2055,7 @@ public class RoboDoc extends GRobot
 				Súbor.kopíruj("kategorie-metod.html",
 					priečinok + "/kategorie-metod.html", true);
 				System.out.println("Súbor „kategorie-metod.html“ " +
-					"úspešne skopírovaný…");
+					"bol úspešne skopírovaný…");
 			}
 			catch (Exception e)
 			{
@@ -2108,7 +2108,8 @@ public class RoboDoc extends GRobot
 			{
 				// Súbor.kopíruj("inherit.gif", priečinok +
 				// 	"/resources/inherit.gif", true);
-				// System.out.println("Súbor „inherit.gif“ úspešne skopírovaný…");
+				// System.out.println("Súbor „inherit.gif“ " +
+				// 	"bol úspešne skopírovaný…");
 				Súbor.vytvorPriečinok(priečinok + "/resources");
 
 				try
@@ -2116,7 +2117,18 @@ public class RoboDoc extends GRobot
 					Súbor.kopíruj("zoznam-zmien.html",
 						priečinok + "/zoznam-zmien.html", true);
 					System.out.println("Súbor „zoznam-zmien.html“ " +
-						"úspešne skopírovaný…");
+						"bol úspešne skopírovaný…");
+				}
+				catch (Exception e)
+				{
+					System.out.println(" " + e.getMessage());
+				}
+
+				try
+				{
+					Súbor.kopíruj("script.js", priečinok + "/script.js", true);
+					System.out.println("Súbor „script.js“ " +
+						"bol úspešne skopírovaný…");
 				}
 				catch (Exception e)
 				{
@@ -2135,7 +2147,7 @@ public class RoboDoc extends GRobot
 						Súbor.kopíruj("zdroje/" + ďalší,
 							priečinok + "/resources/" + ďalší, false);
 						System.out.println("Súbor „" + ďalší +
-							"“ úspešne skopírovaný…");
+							"“ bol úspešne skopírovaný…");
 					}
 					catch (Exception e)
 					{
@@ -2406,7 +2418,7 @@ public class RoboDoc extends GRobot
 				Súbor.kopíruj("kategorie-metod.html",
 					priečinok + "/kategorie-metod.html", true);
 				System.out.println("Súbor „kategorie-metod.html“ " +
-					"úspešne skopírovaný…");
+					"bol úspešne skopírovaný…");
 			}
 			catch (Exception e)
 			{

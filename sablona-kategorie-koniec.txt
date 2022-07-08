@@ -35,14 +35,17 @@
 </ul>
 <div>
 <script type="text/javascript"><!--
-  allTriedyLink = document.getElementById("allclasses_navbar_bottom");
-  if(window==top) {
-    allTriedyLink.style.display = "block";
-  }
-  else {
-    allTriedyLink.style.display = "none";
-  }
-  //-->
+/*
+	allTriedyLink = document.getElementById("allclasses_navbar_bottom");
+	if(window==top) {
+		allTriedyLink.style.display = "block";
+	}
+	else
+*/
+	{
+		// allTriedyLink.style.display = "none";
+	}
+//-->
 </script>
 </div>
 <a name="skip.navbar.bottom">

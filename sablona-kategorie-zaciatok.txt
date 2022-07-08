@@ -12,13 +12,13 @@
 </head>
 <body onload="onLoadPage()">
 <script type="text/javascript"><!--
-    try {
-        if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="Kategórie metód";
-        }
-    }
-    catch(err) {
-    }
+	try {
+		if (location.href.indexOf('is-external=true') == -1) {
+			parent.document.title="Kategórie metód";
+		}
+	}
+	catch(err) {
+	}
 //-->
 </script>
 <noscript>
@@ -51,14 +51,17 @@
 </ul>
 <div>
 <script type="text/javascript"><!--
-  allTriedyLink = document.getElementById("allclasses_navbar_top");
-  if(window==top) {
-    allTriedyLink.style.display = "block";
-  }
-  else {
-    allTriedyLink.style.display = "none";
-  }
-  //-->
+/*
+	allTriedyLink = document.getElementById("allclasses_navbar_top");
+	if(window==top) {
+		allTriedyLink.style.display = "block";
+	}
+	else
+*/
+	{
+		// allTriedyLink.style.display = "none";
+	}
+//-->
 </script>
 </div>
 <a name="skip.navbar.top">

@@ -305,6 +305,12 @@ public class RoboDoc extends GRobot
 		"Farba.html",
 		"Farba.html",
 
+		"Filtre.html",
+		"Filtre.html",
+
+		"Filtre.Filter.html",
+		"Filtre-Filter.html",
+
 		"GRobot.Spojnica.html",
 		"GRobot-Spojnica.html",
 
@@ -721,6 +727,12 @@ public class RoboDoc extends GRobot
 
 		"Farebnost.html",
 		"Farebnost.html",
+
+		"Filtre.html",
+		"Filtre.html",
+
+		"Filtre.Filter.html",
+		"Filtre-Filter.html",
 
 		"GRobot.html",
 		"GRobot.html",
@@ -4049,10 +4061,10 @@ public class RoboDoc extends GRobot
 			"Konsstanty", "Klaves", "Klaaves", "index", "hodnoty-konstant",
 			"GRobotException", "GRobotException-Dennik",
 			"GRobotException-Denniik", "GRobotException-Chyba", "GRobot",
-			"GRobot-Spojnica", "Farebnostt", "Farebnost", "Farba", "CCastica",
-			"Castica", "Bod", "Archiv", "Archiiv", "Tlacc-Slovo",
-			"Tlacc-Fragment", "Tlacc-Parametre", "Tlacc-RiadokSlov",
-			"Tlacc-BlokSlov", "Tlacc", "Tlac"}) try
+			"GRobot-Spojnica", "Farebnostt", "Farebnost", "Farba", "Filtre",
+			"Filtre-Filter", "CCastica", "Castica", "Bod", "Archiv", "Archiiv",
+			"Tlacc-Slovo", "Tlacc-Fragment", "Tlacc-Parametre",
+			"Tlacc-RiadokSlov", "Tlacc-BlokSlov", "Tlacc", "Tlac"}) try
 		{
 			System.out.println("Dodatočné spracovanie súboru: robodoc/" +
 				meno + " (prevod HTML súboru na PHP súbor, ktorý bude " +
@@ -4066,11 +4078,11 @@ public class RoboDoc extends GRobot
 
 		// class-use
 		for (String meno : new String[] {"Archiv", "Archiiv", "Bod",
-			"Castica", "Farba", "Farebnost", "Farebnostt",
-			"GRobot-Spojnica", "GRobot", "GRobotException-Chyba",
-			"GRobotException-Dennik", "GRobotException-Denniik",
-			"GRobotException", "Klaves", "Klaaves", "Konstanty",
-			"KontextovaPolozka", "KontextovaPonuka",
+			"Castica", "Farba", "Farebnost", "Farebnostt", "Filtre",
+			"Filtre-Filter", "GRobot-Spojnica", "GRobot",
+			"GRobotException-Chyba", "GRobotException-Dennik",
+			"GRobotException-Denniik", "GRobotException", "Klaves", "Klaaves",
+			"Konstanty", "KontextovaPolozka", "KontextovaPonuka",
 			"KontextovaaPolozzka", "KontextovaaPonuka", "Konsstanty",
 			"KreslenieTvaru", "Oblast", "Oblastt", "Obrazok", "Obraazok",
 			"ObsluhaUdalosti", "ObsluhaUdalostii", "Pismo", "Platno",

@@ -1532,6 +1532,9 @@ public class RoboDoc extends GRobot
 		// "++strk++",
 		// "stroke",
 
+		"<code>qwx",
+		"<code>",
+
 		"<p><image>",
 		"<p class=\"image\"><img src=\"resources/",
 
@@ -2617,7 +2620,9 @@ public class RoboDoc extends GRobot
 
 
 	private final static Pattern rozpoznajPredĎalšTriedu =
-		Pattern.compile("<li>(?:<a href=\"[^\"]+\" title=\"[^\"]+\"><span class=\"typeNameLink\">)?(?:Predchádzajúca|Ďalšia) trieda(?:</span></a>)?</li>");
+		Pattern.compile("<li>(?:<a href=\"[^\"]+\" title=\"[^\"]+\"><span " +
+			"class=\"typeNameLink\">)?(?:Predchádzajúca|Ďalšia) trieda" +
+			"(?:</span></a>)?</li>");
 
 	private int aktualizujSúbor(String[] pridaj, String[] nahraď)
 	{
@@ -3303,10 +3308,15 @@ public class RoboDoc extends GRobot
 		Pattern.compile("<tr id=\"[^\"]+\" class=\"(row|alt)Color\">");
 
 	private final static Pattern nájdiTyp =
-		Pattern.compile("<td class=\"colFirst\"><code>((?:static )?(?:&lt;[^&]+&gt;&nbsp;)?<a(?: target=\"_blank\")? href=\"[^\"]+\" title=\"[^\"]+\">)?([^<]+)(</a>)?(&lt;<a(?: target=\"_blank\")? href=\"[^\"]+\" title=\"[^\"]+\">[^<]+</a>&gt;|&lt;[^&]+&gt;|\\[\\])?</code></td>");
+		Pattern.compile("<td class=\"colFirst\"><code>((?:static " +
+			")?(?:&lt;[^&]+&gt;&nbsp;)?<a(?: target=\"_blank\")? " +
+			"href=\"[^\"]+\" title=\"[^\"]+\">)?([^<]+)(</a>)?(&lt;<a(?: " +
+			"target=\"_blank\")? href=\"[^\"]+\" title=\"[^\"]+\">[^<]+" +
+			"</a>&gt;|&lt;[^&]+&gt;|\\[\\])?</code></td>");
 
 	private final static Pattern rozpoznajUrčenie =
-		Pattern.compile("<a href=\"([^\"]+)\"[^>]*>([^<]+)</a></span>\\(([^(]*)\\)");
+		Pattern.compile("<a href=\"([^\"]+)\"[^>]*>([^<]+)</a></span>" +
+			"\\(([^(]*)\\)");
 
 	private final static Pattern extrahujNázovTriedy =
 		Pattern.compile(priečinok + "[\\\\\\/]([-a-zA-Z]+).html");
@@ -3529,7 +3539,8 @@ public class RoboDoc extends GRobot
 								String kategória =
 									zoznamPodľaParametrov.get(parametre);
 								if (null == kategória)
-									kategória = zoznamPodľaParametrov.get(null);
+									kategória =
+										zoznamPodľaParametrov.get(null);
 
 								if (null == kategória)
 								{

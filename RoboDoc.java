@@ -2155,7 +2155,7 @@ public class RoboDoc extends GRobot
 					"rastlinka-svg.html", "JScrollBar.7z", "test-roja.7z",
 					"kolotoc-ikonky.7z", "vzdialenost-useciek.7z",
 					"graf-rad-2.pdf", "graf-rad-1.pdf", ".htaccess",
-					"uprav.bat"})
+					"uprav.bat", "testPrenosuOkna.7z"})
 				{
 					try
 					{
@@ -3312,7 +3312,7 @@ public class RoboDoc extends GRobot
 			")?(?:&lt;[^&]+&gt;&nbsp;)?<a(?: target=\"_blank\")? " +
 			"href=\"[^\"]+\" title=\"[^\"]+\">)?([^<]+)(</a>)?(&lt;<a(?: " +
 			"target=\"_blank\")? href=\"[^\"]+\" title=\"[^\"]+\">[^<]+" +
-			"</a>&gt;|&lt;[^&]+&gt;|\\[\\])?</code></td>");
+			"</a>&gt;|&lt;[^&]+&gt;|\\[\\]\\[\\]|\\[\\])?</code></td>");
 
 	private final static Pattern rozpoznajUrčenie =
 		Pattern.compile("<a href=\"([^\"]+)\"[^>]*>([^<]+)</a></span>" +
@@ -3964,7 +3964,7 @@ public class RoboDoc extends GRobot
 
 
 	private final static Pattern preveďHTMLnaPHP_zmažHTMLPríponu =
-		Pattern.compile("\"(?!http)([^\"]+)\\.html");
+		Pattern.compile("\"(?!http)([^\"]+)(?<!apache-licence-2\\.0)\\.html");
 	private final static Pattern preveďHTMLnaPHP_vypniClassUseOkazy =
 		Pattern.compile("(<a.*?)( href=\".*?\")(.*?>)");
 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true comment &quot;RSACi North America Server&quot; by &quot;RodStephens@vb-helper.com&quot; for &quot;http://www.vb-helper.com&quot; on &quot;1998.03.17T18:18-0800&quot; r (n 0 s 0 v 0 l 0))" />
+<title>VB Helper: HowTo: Find the shortest distance between two line segments</title>
+<meta name="Author" content="Rod Stephens" />
+<meta charset="UTF-8" />
+<meta http-equiv="Keywords" content="segment, distance, geometry" />
+<meta name="Keywords" content="segment, distance, geometry" />
+<meta name="Description" content="VB Helper: HowTo: Find the shortest distance between two line segments" />
+<meta name="Copyright" content="Copyright © 1997–2010 Rocky Mountain Computer Consulting, Inc." />
+<meta name="Rating" content="General" />
+<meta name="Robots" content="All" />
+<style>
+body, html, pre, p, tr, td
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: #e1f3ff;
+	margin: 20px;
+}
+
+p, tr, td
+{
+	font-family: "Calibri", "Arial", sans-serif;
+	font-size: 24px;
+}
+
+p, pre
+{
+	margin: 10px 0px;
+}
+
+table.summary
+{
+	border-collapse: collapse;
+}
+
+table.summary tr th, table.summary tr td
+{
+	border: 1.75px solid black;
+	padding: 2px 8px;
+}
+
+pre.code
+{
+	font-family: "Consolas", "Courier New", monospace;
+	font-size: 24px;
+	background-color: #fff;
+}
+
+pre.code span.comment
+{
+	color: #008000;
+}
+
+pre.code span:nth-child(odd)
+{
+	display: inline-block;
+	width: 100%;
+	background-color: #e0ffff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- How To Summary -->
+<table class="summary">
+	<tr><th align="left">Title</th><td>Find the shortest distance between two line segments</td></tr>
+	<tr><th align="left">Description</th><td>This example shows how to find the shortest distance between two line segments in Visual Basic 6.</td></tr>
+	<tr><th align="left">Keywords</th><td>segment, distance, geometry</td></tr>
+	<tr><th align="left">Categories</th><td>Graphics, Algorithms</td></tr>
+</table>
+
+<!-- Content -->
+<p>Click four points to pick the end points for the two segments. The program finds the closest points on the two segments and connects them. Function DistBetweenSegments returns the smallest distance between the segments. It uses ByRef parameters near_x1, near_y1, near_x2, and near_y2 to return the points on the two segments that are nearest.</p>
+
+<p>The closest distance between two segments is either zero if they intersect or the distance from one of the lines' end points to the other line. DistBetweenSegments first calls SegmentsIntersect to see if the segments intersect. If they do, it returns zero. It returns the point of intersection returned by SegmentsIntersect for both of the closest points.</p>
+
+<p>If the segments do not intersect, the function calculates the shortest distance from the first segment's end points to the second segment and vice versa and returns the shortest distance.</p>
+
+<!-- Code content -->
+<pre class="code"><span class="comment">' Calculate the distance between</span>
+<span class="comment">' the segment (X11, Y11)-(X12, Y12) and</span>
+<span class="comment">' the segment (X21, Y21)-(X22, Y22).</span>
+<span class="comment">' Return the distance. Return the closest points</span>
+<span class="comment">' on the segments through parameters</span>
+<span class="comment">' (near_x1, near_y1) and (near_x2, near_y2).</span>
+<span>Private Function DistBetweenSegments(ByVal X11 As Single, _</span>
+<span>    ByVal Y11 As Single, ByVal X12 As Single, ByVal Y12 As _</span>
+<span>    Single, ByVal X21 As Single, ByVal Y21 As Single, ByVal _</span>
+<span>    X22 As Single, ByVal Y22 As Single, ByRef near_x1 As _</span>
+<span>    Single, ByRef near_y1 As Single, ByRef near_x2 As _</span>
+<span>    Single, ByRef near_y2 As Single) As Single</span>
+<span>Dim dx As Single</span>
+<span>Dim dy As Single</span>
+<span>Dim t As Single</span>
+<span>Dim best_dist As Single</span>
+<span>Dim test_dist As Single</span>
+<span>Dim test_x As Single</span>
+<span>Dim test_y As Single</span>
+<span> </span>
+<span class="comment">    ' See if the segments intersect.</span>
+<span>    If SegmentsIntersect(X11, Y11, X12, Y12, X21, Y21, X22, _</span>
+<span>        Y22, near_x1, near_y1) Then</span>
+<span class="comment">        ' The segments intersect.</span>
+<span>        DistBetweenSegments = 0</span>
+<span>        near_x2 = near_x1</span>
+<span>        near_y2 = near_y1</span>
+<span>        Exit Function</span>
+<span>    End If</span>
+<span> </span>
+<span class="comment">    ' Check (X11, Y11) with segment 2.</span>
+<span>    test_dist = DistToSegment(X11, Y11, X21, Y21, X22, Y22, _</span>
+<span>        test_x, test_y)</span>
+<span>    best_dist = 1E+38</span>
+<span>    If test_dist &lt; best_dist Then</span>
+<span>        best_dist = test_dist</span>
+<span>        near_x1 = test_x</span>
+<span>        near_y1 = test_y</span>
+<span>        near_x2 = X11</span>
+<span>        near_y2 = Y11</span>
+<span>    End If</span>
+<span> </span>
+<span class="comment">    ' Check (X12, Y12) with segment 2.</span>
+<span>    test_dist = DistToSegment(X12, Y12, X21, Y21, X22, Y22, _</span>
+<span>        test_x, test_y)</span>
+<span>    If test_dist &lt; best_dist Then</span>
+<span>        best_dist = test_dist</span>
+<span>        near_x1 = X12</span>
+<span>        near_y1 = Y12</span>
+<span>        near_x2 = test_x</span>
+<span>        near_y2 = test_y</span>
+<span>    End If</span>
+<span> </span>
+<span class="comment">    ' Check (X21, Y21) with segment 1.</span>
+<span>    test_dist = DistToSegment(X21, Y21, X11, Y11, X12, Y12, _</span>
+<span>        test_x, test_y)</span>
+<span>    If test_dist &lt; best_dist Then</span>
+<span>        best_dist = test_dist</span>
+<span>        near_x1 = test_x</span>
+<span>        near_y1 = test_y</span>
+<span>        near_x2 = X21</span>
+<span>        near_y2 = Y21</span>
+<span>    End If</span>
+<span> </span>
+<span class="comment">    ' Check (X22, Y22) with segment 1.</span>
+<span>    test_dist = DistToSegment(X22, Y22, X11, Y11, X12, Y12, _</span>
+<span>        test_x, test_y)</span>
+<span>    If test_dist &lt; best_dist Then</span>
+<span>        best_dist = test_dist</span>
+<span>        near_x1 = test_x</span>
+<span>        near_y1 = test_y</span>
+<span>        near_x2 = X22</span>
+<span>        near_y2 = Y22</span>
+<span>    End If</span>
+<span> </span>
+<span>    DistBetweenSegments = best_dist</span>
+<span>End Function</span></pre>
+
+<!-- Text content -->
+<p>For information on function SegmentsIntersect, see <a href="http://vb-helper.com/howto_segments_intersect.html" target="_blank">Determine whether two line segments intersect.</a></p>
+
+<p>For information on function DistToSegment, see <a href="http://vb-helper.com/howto_distance_point_to_line.html" target="_blank">Find the distance between a point and a line segment.</a></p>
+
+<!-- Download button -->
+<p><a href="vb-helper-howto-distance-segment-to-segment.7z" target="_blank">Download</a></p>
+
+<!-- Footer -->
+<p>Copyright © 1997–2006 Rocky Mountain Computer Consulting, Inc. All rights reserved.</p>
+<p><a href="http://www.vb-helper.com/howto_distance_segment_to_segment.html" target="_blank">http://www.vb-helper.com/howto_distance_segment_to_segment.html</a></p>
+<p>Updated 11/10/2010 20:06:54</p>
+
+</body>
+</html>

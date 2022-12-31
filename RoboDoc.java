@@ -2152,10 +2152,12 @@ public class RoboDoc extends GRobot
 
 				// Ďalšie súbory (neprepisované automaticky):
 				for (String ďalší : new String[] {"apache-licence-2.0.html",
-					"rastlinka-svg.html", "JScrollBar.7z", "test-roja.7z",
-					"kolotoc-ikonky.7z", "vzdialenost-useciek.7z",
-					"graf-rad-2.pdf", "graf-rad-1.pdf", ".htaccess",
-					"uprav.bat", "testPrenosuOkna.7z"})
+					"howto-distance-segment-to-segment.html", "JScrollBar.7z",
+					"rastlinka-svg.html", "test-roja.7z", "kolotoc-ikonky.7z",
+					"vzdialenost-useciek.7z", ".htaccess", "uprav.bat",
+					"graf-rad-2.pdf", "graf-rad-1.pdf", "testPrenosuOkna.7z",
+					"DistanceLine3Line3.pdf", "Horvath-Fialova-ICETA-2020.pdf",
+					"Horvath-ICETA-2022.pdf"})
 				{
 					try
 					{
@@ -4138,6 +4140,27 @@ public class RoboDoc extends GRobot
 					"aktuálny obsah.");
 				if (!Súbor.vymaž(priečinok +
 					"/resources/rastlinka-svg.html"))
+					System.err.println("  Súbor nemohol byť vymazaný. " +
+						"Môže vznikať redundancia.");
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		try
+		{
+			if (!Súbor.premenuj(priečinok +
+				"/resources/howto-distance-segment-to-segment.html",
+				priečinok + "/resources/howto-distance-segment-to-segment.php"))
+			{
+				System.err.println("Zlyhalo premenovanie súboru: " +
+					"howto-distance-segment-to-segment.html" +
+					". Asi už jestvuje prislúchajúci .php súbor. " +
+					"Overte, či má súbor aktuálny obsah.");
+				if (!Súbor.vymaž(priečinok +
+					"/resources/howto-distance-segment-to-segment.html"))
 					System.err.println("  Súbor nemohol byť vymazaný. " +
 						"Môže vznikať redundancia.");
 			}

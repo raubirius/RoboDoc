@@ -143,10 +143,10 @@ Prekrytie (a iné anotácie):
 
 Ďalšie:
 
-\{@link __CLASS__#(ObsluhaUdalostí|ÚdajeUdalostí|GRobot|Kláves|Obrázok|Oblasť|Súbor|Svet|Spojnica|Bod|Farba|Častica|Plátno|Tlačidlo|RolovaciaLišta|Poloha|String|Double|Boolean|SVGPodpora|Roj|System|Math|Tlač)\(__ARGS__\) \1\}
+\{@link __CLASS__#(ObsluhaUdalostí|ÚdajeUdalostí|GRobot|GRobotException|Kláves|Obrázok|Oblasť|Súbor|Svet|Spojnica|Bod|Farba|Color|Častica|Plátno|Tlačidlo|RolovaciaLišta|Poloha|String|Double|Boolean|SVGPodpora|Roj|System|Math|Tlač|Shape|Skript)\(__ARGS__\) \1\}
 {@link $1 $1}
 
-\{@link (ObsluhaUdalostí|ÚdajeUdalostí|GRobot|Kláves|Obrázok|Oblasť|Súbor|Svet|Spojnica|Bod|Farba|Častica|Plátno|Tlačidlo|RolovaciaLišta|Poloha|String|Double|Boolean|SVGPodpora|Roj|System|Math|Tlač) \1\}\.\{@link __CLASS__
+\{@link (ObsluhaUdalostí|ÚdajeUdalostí|GRobot|GRobotException|Kláves|Obrázok|Oblasť|Súbor|Svet|Spojnica|Bod|Farba|Color|Častica|Plátno|Tlačidlo|RolovaciaLišta|Poloha|String|Double|Boolean|SVGPodpora|Roj|System|Math|Tlač|Shape|Skript) \1\}\.\{@link __CLASS__
 {@link $1 $1}.{@link $1
 
 \{@link __CLASS__#(strop|podlaha)\(__ARGS__\) \1\}
@@ -337,6 +337,9 @@ public class RoboDoc extends GRobot
 
 		"ObsluhaUdalosti.html",
 		"ObsluhaUdalosti.html",
+
+		"Okno.html",
+		"Okno.html",
 
 		"Písmo.html",
 		"Piismo.html",
@@ -772,6 +775,9 @@ public class RoboDoc extends GRobot
 
 		"ObsluhaUdalosti.html",
 		"ObsluhaUdalosti.html",
+
+		"Okno.html",
+		"Okno.html",
 
 		"Pismo.html",
 		"Pismo.html",
@@ -4067,7 +4073,7 @@ public class RoboDoc extends GRobot
 			"Rad", "Priehlladnostt", "Priehladnost", "PoznamkovyBlok",
 			"PoznaamkovyyBlok", "PolozzkaPonuky", "PolozkaPonuky",
 			"Poloha", "Plazma", "Platno", "Plaatno", "Pismo", "Piismo",
-			"package-use", "ObsluhaUdalostii",
+			"package-use", "Okno", "ObsluhaUdalostii",
 			"ObsluhaUdalosti", "Obrazok", "Obraazok", "Oblastt", "Oblast",
 			"KreslenieTvaru", "KontextovaPonuka", "KontextovaPolozka",
 			"KontextovaaPonuka", "KontextovaaPolozzka", "Konstanty",
@@ -4098,7 +4104,7 @@ public class RoboDoc extends GRobot
 			"Konstanty", "KontextovaPolozka", "KontextovaPonuka",
 			"KontextovaaPolozzka", "KontextovaaPonuka", "Konsstanty",
 			"KreslenieTvaru", "Oblast", "Oblastt", "Obrazok", "Obraazok",
-			"ObsluhaUdalosti", "ObsluhaUdalostii", "Pismo", "Platno",
+			"ObsluhaUdalosti", "ObsluhaUdalostii", "Okno", "Pismo", "Platno",
 			"Plazma", "Plaatno", "Poloha", "PolozkaPonuky",
 			"PolozzkaPonuky", "PoznamkovyBlok", "PoznaamkovyyBlok",
 			"Priehladnost", "Priehlladnostt", "Piismo", "Rad",

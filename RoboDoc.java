@@ -413,6 +413,9 @@ public class RoboDoc extends GRobot
 		"SVGPodpora.html",
 		"SVGPodpora.html",
 
+		"SVGPodpora.Spracovanie.html",
+		"SVGPodpora-Spracovanie.html",
+
 		"SVGPodpora.Transformácia.html",
 		"SVGPodpora-Transformaacia.html",
 
@@ -548,6 +551,9 @@ public class RoboDoc extends GRobot
 
 		"Spojenie.html",
 		"Spojenie.html",
+
+		"Spojenie.Ladenie.html",
+		"Spojenie-Ladenie.html",
 
 
 		// (package private):
@@ -836,6 +842,9 @@ public class RoboDoc extends GRobot
 		"Spojenie.html",
 		"Spojenie.html",
 
+		"Spojenie.Ladenie.html",
+		"Spojenie-Ladenie.html",
+
 		"Subor.html",
 		"Subor.html",
 
@@ -847,6 +856,9 @@ public class RoboDoc extends GRobot
 
 		"SVGPodpora.html",
 		"SVGPodpora.html",
+
+		"SVGPodpora.Spracovanie.html",
+		"SVGPodpora-Spracovanie.html",
 
 		"SVGPodpora.Transformacia.html",
 		"SVGPodpora-Transformacia.html",
@@ -4062,18 +4074,18 @@ public class RoboDoc extends GRobot
 			"Zoznam", "zoznam-zmien", "Zoznam-ObratenyIterator",
 			"Zoznam-ObraatenyyIteraator", "ZmenaCelejObrazovky", "Vlnenie",
 			"UUdajeUdalostii", "Uhol", "UdajeUdalosti", "Tlacidlo",
-			"Tlaccidlo", "SVGPodpora", "SVGPodpora-Transformacia",
-			"SVGPodpora-Transformaacia", "Svet", "Svet-PrikazovyRiadok",
-			"Svet-PriikazovyyRiadok",
+			"Tlaccidlo", "SVGPodpora", "SVGPodpora-Spracovanie",
+			"SVGPodpora-Transformacia", "SVGPodpora-Transformaacia", "Svet",
+			"Svet-PrikazovyRiadok", "Svet-PriikazovyyRiadok",
 			"Svet-PriikazovyyRiadok-PresmerovanieVyystupu", "Suubor",
-			"Subor", "Spojenie", "Smer", "Skript", "Skript-PremenneSkriptu",
-			"Skript-PremenneeSkriptu", "serialized-form", "Schranka",
-			"Schraanka", "RolovaciaLista", "RolovaciaLissta", "Rozmery",
-			"Rozmer", "Roj", "Roj-Smernik", "Roj-Smerniik", "Roj-Bod",
-			"Rad", "Priehlladnostt", "Priehladnost", "PoznamkovyBlok",
-			"PoznaamkovyyBlok", "PolozzkaPonuky", "PolozkaPonuky",
-			"Poloha", "Plazma", "Platno", "Plaatno", "Pismo", "Piismo",
-			"package-use", "Okno", "ObsluhaUdalostii",
+			"Subor", "Spojenie", "Spojenie-Ladenie", "Smer", "Skript",
+			"Skript-PremenneSkriptu", "Skript-PremenneeSkriptu",
+			"serialized-form", "Schranka", "Schraanka", "RolovaciaLista",
+			"RolovaciaLissta", "Rozmery", "Rozmer", "Roj", "Roj-Smernik",
+			"Roj-Smerniik", "Roj-Bod", "Rad", "Priehlladnostt", "Priehladnost",
+			"PoznamkovyBlok", "PoznaamkovyyBlok", "PolozzkaPonuky",
+			"PolozkaPonuky", "Poloha", "Plazma", "Platno", "Plaatno", "Pismo",
+			"Piismo", "package-use", "Okno", "ObsluhaUdalostii",
 			"ObsluhaUdalosti", "Obrazok", "Obraazok", "Oblastt", "Oblast",
 			"KreslenieTvaru", "KontextovaPonuka", "KontextovaPolozka",
 			"KontextovaaPonuka", "KontextovaaPolozzka", "Konstanty",
@@ -4105,24 +4117,22 @@ public class RoboDoc extends GRobot
 			"KontextovaaPolozzka", "KontextovaaPonuka", "Konsstanty",
 			"KreslenieTvaru", "Oblast", "Oblastt", "Obrazok", "Obraazok",
 			"ObsluhaUdalosti", "ObsluhaUdalostii", "Okno", "Pismo", "Platno",
-			"Plazma", "Plaatno", "Poloha", "PolozkaPonuky",
-			"PolozzkaPonuky", "PoznamkovyBlok", "PoznaamkovyyBlok",
-			"Priehladnost", "Priehlladnostt", "Piismo", "Rad",
-			"Roj-Smernik", "Roj-Smerniik", "Roj-Bod", "Roj",
-			"RolovaciaLista", "RolovaciaLissta", "Rozmery", "Rozmer",
-			"Schranka", "Schraanka",
-			"Skript-PremenneSkriptu", "Skript-PremenneeSkriptu",
-			"Skript", "Smer", "Spojenie", "Subor",
-			"Svet-PrikazovyRiadok",
+			"Plazma", "Plaatno", "Poloha", "PolozkaPonuky", "PolozzkaPonuky",
+			"PoznamkovyBlok", "PoznaamkovyyBlok", "Priehladnost",
+			"Priehlladnostt", "Piismo", "Rad", "Roj-Smernik", "Roj-Smerniik",
+			"Roj-Bod", "Roj", "RolovaciaLista", "RolovaciaLissta", "Rozmery",
+			"Rozmer", "Schranka", "Schraanka", "Skript-PremenneSkriptu",
+			"Skript-PremenneeSkriptu", "Skript", "Smer", "Spojenie",
+			"Spojenie-Ladenie", "Subor", "Svet-PrikazovyRiadok",
 			"Svet-PriikazovyyRiadok-PresmerovanieVyystupu",
 			"Svet-PriikazovyyRiadok", "Svet", "SVGPodpora-Transformacia",
-			"SVGPodpora-Transformaacia", "SVGPodpora", "Suubor",
-			"Tlacidlo", "Tlaccidlo", "Tlacc-Slovo", "Tlacc-Fragment",
-			"Tlacc-Parametre", "Tlacc-RiadokSlov", "Tlacc-BlokSlov",
-			"Tlacc", "Tlac", "UdajeUdalosti", "Uhol", "Vlnenie",
-			"ZmenaCelejObrazovky", "Zoznam-ObratenyIterator",
-			"Zoznam-ObraatenyyIteraator", "Zoznam", "Zvuk",
-			"UUdajeUdalostii", "CCastica"}) try
+			"SVGPodpora-Transformaacia", "SVGPodpora-Spracovanie",
+			"SVGPodpora", "Suubor", "Tlacidlo", "Tlaccidlo", "Tlacc-Slovo",
+			"Tlacc-Fragment", "Tlacc-Parametre", "Tlacc-RiadokSlov",
+			"Tlacc-BlokSlov", "Tlacc", "Tlac", "UdajeUdalosti", "Uhol",
+			"Vlnenie", "ZmenaCelejObrazovky", "Zoznam-ObratenyIterator",
+			"Zoznam-ObraatenyyIteraator", "Zoznam", "Zvuk", "UUdajeUdalostii",
+			"CCastica"}) try
 		{
 			System.out.println("Dodatočné spracovanie súboru: " +
 				"robodoc/class-use/" + meno + " (prevod HTML súboru " +

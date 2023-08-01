@@ -136,6 +136,18 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 
 <p>(pracuje sa)</p>
 
+<p>Oprava viacerých múch v triede <code><a href="SVGPodpora.html">SVGPodpora</a></code>.</p>
+
+<p>V triede <code><a href="Plaatno.html">Plátno</a></code> pribudla nová metóda:  <code><a href="Plaatno.html#jestvujeOznačenie--">jestvujeOznačenie</a></code> (a k nej príbuzné).</p>
+
+<p>Boli pridané ďalšie možnosti <a href="Svet.html#dialóg-java.lang.String:A-java.lang.Object:A-java.lang.String-">komunikačného dialógu sveta</a>; s tým súvisí pridanie metód <code><a href="Svet.html#mojeOdpovede-java.lang.Object:A-">mojeOdpovede</a></code> a <code><a href="Svet.html#odpoveďDialógu--">odpoveďDialógu</a></code> a definícia novej konštanty <code><a href="GRobot.html#návrat">návrat</a></code>.</p>
+
+<p>Pridanie metódy sveta: <code><a href="Svet.html#panelVstupnéhoRiadka--">panelVstupnéhoRiadka</a></code>, ktorá dopĺňa možnosti ovplyvňovania vstupného riadka – metóda <code><a href="Svet.html#vstupnýRiadok--">vstupnýRiadok</a></code> bola v programovacom rámci prítomná už dlhší čas.</p>
+
+<p>Pridanie novej metódy sveta: <code><a href="Svet.html#naRiadkyBezZmien-int-java.lang.String-">naRiadkyBezZmien</a></code>.</p>
+
+<p>Oprava viacerých chýb v dokumentácii. (Preklepy, bohemizmy, preformulovanie opisu metódy <code><a href="Svet.html#novýKurzorMyši-Image-int-int-String-">novýKurzorMyši</a></code> (bol naozaj veľmi nezrozumiteľný) atď.)</p>
+
 <p>Pridanie novej metódy sveta: <code><a href="Svet.html#ťahajSúbory-int-java.lang.String...-">ťahajSúbory</a></code> a s tým súvisiacej udalosti <code><a href="ObsluhaUdalostii.html#ťahanieUkončené-javax.swing.JComponent-java.awt.datatransfer.Transferable-int-">ťahanieUkončené</a></code>.</p>
 
 <h3>Verzia 2.18</h3>
@@ -1101,7 +1113,7 @@ a <code><a href="GRobot.html#F-double-int-">F</a>(číslo, šírka, desatinné)
 <p>Zoznam úprav:</p>
 
 <ul>
-<li>všetky konštanty, okrem farieb a konštánt <code><a href="GRobot.html#riadok">riadok</a></code>, <code><a href="GRobot.html#majorVersion">majorVersion</a></code>, <code><a href="GRobot.html#minorVersion">minorVersion</a></code>, <code><a href="GRobot.html#mainDeveloper">mainDeveloper</a></code> a <code><a href="GRobot.html#years">years</a></code> boli prehlásené za zastarané a boli namiesto nich vytvorené nové konštanty dodržujúce pravidlá zápisu identifikátorov konštánt jazyka Java,</li>
+<li>všetky konštanty, okrem farieb a konštánt <code><a href="GRobot.html#riadok">riadok</a></code>, <code><a href="GRobot.html#majorVersion">majorVersion</a></code>, <code><a href="GRobot.html#minorVersion">minorVersion</a></code>, <code><a href="GRobot.html#mainDeveloper">mainDeveloper</a></code> a <code><a href="GRobot.html#years">years</a></code> boli vyhlásené za zastarané a boli namiesto nich vytvorené nové konštanty dodržujúce pravidlá zápisu identifikátorov konštánt jazyka Java,</li>
 <li>niektoré metódy (<small>všetky, ktoré fungovali na rovnakom princípe ako metódy: <code><a href="GRobot.html#myšV--">myšV</a></code>, <code><a href="GRobot.html#otoč-double-double-">otoč</a></code>, <code><a href="GRobot.html#smerNa-double-double-">smerNa</a></code>, <code><a href="GRobot.html#vzdialenosť--">vzdialenosť</a></code> a iné…</small>) prešli optimalizáciou, pričom ich funkcionalita sa navonok nijako nezmenila.</li>
 </ul>
 

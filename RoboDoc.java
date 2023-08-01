@@ -182,8 +182,8 @@ Väčšinou toto platí:
 $1
 
 
-Hľadanie dvojitých prázdnych riadkov:
-<pre(?:\p{all}(?<!</pre))*\n\n\n
+Hľadanie dvojitých prázdnych riadkov (pridanie čiar):
+<pre\b(?:\p{all}(?<!</pre))*\n\n\n
 Treba nahradiť (tesne prilepené, lebo to aj tak zobrazuje voľný riadok
 pred a za):
 <hr/>
@@ -1857,7 +1857,7 @@ public class RoboDoc extends GRobot
 		"<h2>Používanie diakritiky</h2>\r\n\r\n" +
 		//   ---------------------
 		"<p>Pri programovaní sa z historických dôvodov vždy tolerovalo nepoužívanie diakritiky. Java, Python a iné programovacie jazyky však v súčasnosti už prekonali bariéru nemožnosti používania diakritiky, takže je otázkou, prečo by sme sa stále mali jej používaniu brániť?</p>\r\n\r\n" +
-		"<p>Možno si neuvedomujete, aká je diakritika v slovenčine dôležitá. Prečítajte nasledujúce slová bez diakritiky: bábka, krík, látka, pračka, koža, posuň, kópia, puška, plát, tvár, brať, zoznám, kočka, moč, šteňa, plást, špinka, zásadne, troška, uhoľ, Mačka, Maťka, Máška, Rúško. Hneď si uvedomíte rozdiel. Skúste bez pomoci vydedukovať, čo by robila nasledujúca metóda nazvaná bez diakritiky takto: <code>vypisNaBode</code>? Je to <code>vypíšNaBode</code> (zápis) alebo <code>výpisNaBode</code> (čítanie)? Správna odpoveď v rámci tohto programovacieho rámca je práve tá druhá. Ďalší príklad: Z nasledujúcich štyroch variantov slov majú tri unikátny význam a jeden je obmenou jedného z trojice (ak ignorujeme homonymický význam): cela, celá, čela, čelá.</p>\r\n\r\n" +
+		"<p>Možno si neuvedomujete, aká je diakritika v slovenčine dôležitá. Prečítajte nasledujúce slová bez diakritiky: bábka, krík, látka, pračka, párenie, koža, posuň, kópia, puška, plát, tvár, brať, zoznám, kočka, moč, šteňa, plást, špinka, zásadne, troška, uhoľ, Mačka, Maťka, Máška, Rúško. Hneď si uvedomíte rozdiel. Niektoré slová po odstránení diakritiky nemajú význam, ale zostanú dvojznačné (napríklad: nákup/nakúp, späť/spať). Skúste bez pomoci vydedukovať, čo by robila nasledujúca metóda nazvaná bez diakritiky takto: <code>vypisNaBode</code>? Je to <code>vypíšNaBode</code> (zápis) alebo <code>výpisNaBode</code> (čítanie)? Správna odpoveď v rámci tohto programovacieho rámca je práve tá druhá. Ďalší príklad: Z nasledujúcich štyroch variantov slov majú tri unikátny význam a jeden je obmenou jedného z trojice (ak ignorujeme homonymický význam): cela, celá, čela, čelá.</p>\r\n\r\n" +
 		"<p>V záujme ústretovosti sme sa v tomto rámci pokúsili definovať aliasy všetkých tried, atribútov a metód aj bez diakritiky, no ich používanie neodporúčame. Niekedy nastávajú problémy s kompatibilitou. Niekedy dokonca definovanie kompatibilného aliasu nebolo možné, pretože k návratovej hodnote objektu s diakritikou (napr. <code>Obrázok</code>) bola prisúdená metóda, ktorá žiadnu diakritiku neobsahovala (<code>ikona()</code>), takže k objektu bez diakritiky (<code>Obrazok</code>) nemohla byť definovaná rovnomenná metóda (je to riešené bezdiakritickým „aliasom“ <code>obrazok()</code>).</p>\r\n\r\n" +
 		"<p>O aliasoch a diakritike sa píše aj v spomínaných úvodných pasážach opisu triedy <a href=\"GRobot.html\">GRobot</a>.</p>\r\n\r\n" +
 		"<h2></h2><p><small>(Od verzie 1.0 vyššie je pravidelne aktualizovaný <a href=\"zoznam-zmien.html\">zoznam zmien</a>.)</small></p>\r\n\r\n",
@@ -2109,7 +2109,7 @@ public class RoboDoc extends GRobot
 			exec(javadocPath + "javadoc " +
 				"-use -author -version -protected -source 1.8 " +
 				"-noindex -notree -nohelp " + // -nonavbar 
-				"-exclude podpora apacheAntZIP " +
+				"-exclude log podpora apacheAntZIP " +
 				"-link https://docs.ORACLE.com/javase/8/docs/api/ " +
 				"-d ../RoboDoc/" + priečinok + " -encoding UTF-8 " +
 				"-docencoding UTF-8 knižnica " + // GRobot.java

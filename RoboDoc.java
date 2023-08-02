@@ -254,6 +254,8 @@ kwdnew} {@link GRobot.$1#GRobot.$1(__ARGS__)
 <img src="resources/SVGTvarRobota.png" alt="Ukážka zmeny tvaru robota s pomocou SVG tvarov tesne po prvom spustení." /><br /><span class="imageSpace"> </span><br />
 */
 
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Vector;
@@ -266,6 +268,8 @@ import knižnica.Konštanty;
 import knižnica.Súbor;
 import knižnica.Svet;
 import knižnica.Zoznam;
+
+import static java.util.Calendar.*;
 
 public class RoboDoc extends GRobot
 {
@@ -2030,21 +2034,120 @@ public class RoboDoc extends GRobot
 
 	/******************************************************************/
 
+	private final static Súbor súbor = new Súbor();
+
+	private static boolean zapíšČasŠtartu1 = true;
+	private static boolean zapíšČasŠtartu2 = true;
+	private static Calendar časŠtartu = Calendar.getInstance();
+
+	private static void write(Object... objs)
+	{
+		try {
+			súbor.otvorNaZápis("RoboDoc-out.log", true);
+
+			if (zapíšČasŠtartu1 && null != časŠtartu)
+			{
+				int deň = časŠtartu.get(DAY_OF_MONTH);
+				int mesiac = časŠtartu.get(MONTH) + 1;
+				int rok = časŠtartu.get(YEAR);
+				int hodina = časŠtartu.get(HOUR_OF_DAY);
+				int minúta = časŠtartu.get(MINUTE);
+				int sekunda = časŠtartu.get(SECOND);
+
+				String štart = "\r\nŠtart: " +
+					deň + ". " + mesiac + ". " + rok + ", " +
+					String.format(Locale.ENGLISH, "%02d", hodina) + ":" +
+					String.format(Locale.ENGLISH, "%02d", minúta) + ":" +
+					String.format(Locale.ENGLISH, "%02d", sekunda) +
+					"\r\n\r\n";
+
+				System.out.print(štart);
+				súbor.zapíšReťazec(štart);
+
+				zapíšČasŠtartu1 = false;
+			}
+
+			for (Object obj : objs)
+			{
+				System.out.print(obj);
+				súbor.zapíšReťazec(String.valueOf(obj));
+			}
+
+			súbor.zavri();
+
+		} catch (Throwable t) {
+			t.printStackTrace();
+		}
+	}
+
+	private static void writeln(Object... objs)
+	{
+		write(objs);
+		write("\r\n");
+	}
+
+	private static void error(Object... objs)
+	{
+		try {
+			súbor.otvorNaZápis("RoboDoc-err.log", true);
+
+			if (zapíšČasŠtartu2 && null != časŠtartu)
+			{
+				int deň = časŠtartu.get(DAY_OF_MONTH);
+				int mesiac = časŠtartu.get(MONTH) + 1;
+				int rok = časŠtartu.get(YEAR);
+				int hodina = časŠtartu.get(HOUR_OF_DAY);
+				int minúta = časŠtartu.get(MINUTE);
+				int sekunda = časŠtartu.get(SECOND);
+
+				String štart = "\r\nŠtart: " +
+					deň + ". " + mesiac + ". " + rok + ", " +
+					String.format(Locale.ENGLISH, "%02d", hodina) + ":" +
+					String.format(Locale.ENGLISH, "%02d", minúta) + ":" +
+					String.format(Locale.ENGLISH, "%02d", sekunda) +
+					"\r\n\r\n";
+
+				System.err.print(štart);
+				súbor.zapíšReťazec(štart);
+
+				zapíšČasŠtartu2 = false;
+			}
+
+			for (Object obj : objs)
+			{
+				System.err.print(obj);
+				súbor.zapíšReťazec(String.valueOf(obj));
+			}
+
+			súbor.zavri();
+
+		} catch (Throwable t) {
+			t.printStackTrace();
+		}
+	}
+
+	private static void errorln(Object... objs)
+	{
+		error(objs);
+		error("\r\n");
+	}
+
+	/******************************************************************/
+
 	private RoboDoc()
 	{
 		if (!Súbor.existuje(priečinok))
 		{
 			if (new java.io.File(priečinok).mkdir())
-				System.out.println("Priečinok " + priečinok + " vytvorený…");
+				writeln("Priečinok " + priečinok + " vytvorený…");
 			else
-				System.out.println("Vytvorenie priečinka " + priečinok +
-					" zlyhalo…");
+				writeln("Vytvorenie priečinka " + priečinok + " zlyhalo…");
 		}
 
 		/* * /
-		System.out.println("OS Name: " + System.getProperty("os.name"));
-		System.out.println("OS Architecture: " + System.getProperty("os.arch"));
-		System.out.println("OS Version: " + System.getProperty("os.version"));
+		writeln("OS Name: " + System.getProperty("os.name"));
+		writeln("OS Architecture: " + System.getProperty("os.arch"));
+		writeln("OS Version: " + System.getProperty("os.version"));
 
 		// Test kategórií:
 		{
@@ -2056,7 +2159,7 @@ public class RoboDoc extends GRobot
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 
 			for (String položka : zoznam)
@@ -2068,7 +2171,7 @@ public class RoboDoc extends GRobot
 					čítajSúbor(priečinok + separator + aktuálnaPoložka);
 					// int zmien = aktualizujSúbor(pridajDoHTML, nahraďVHTML);
 					// // zmien += aktualizujSúbor(pridajDoHTML, premenujSúbory);
-					// System.out.println("Počet zmien " +
+					// writeln("Počet zmien " +
 					// 	aktuálnaPoložka + ": " + zmien);
 					// if (zmien > 0) uložSúbor();
 
@@ -2087,12 +2190,12 @@ public class RoboDoc extends GRobot
 			{
 				Súbor.kopíruj("kategorie-metod.html",
 					priečinok + "/kategorie-metod.html", true);
-				System.out.println("Súbor „kategorie-metod.html“ " +
+				writeln("Súbor „kategorie-metod.html“ " +
 					"bol úspešne skopírovaný…");
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 		}
 
@@ -2103,7 +2206,7 @@ public class RoboDoc extends GRobot
 
 		if (javadoc)
 		{
-			System.out.println("Generovanie dokumentácie systémom javadoc…");
+			writeln("Generovanie dokumentácie systémom javadoc…");
 
 			/* */
 			exec(javadocPath + "javadoc " +
@@ -2128,12 +2231,12 @@ public class RoboDoc extends GRobot
 			// 	// Čo sa to do pekla deje?
 			// 	Súbor.kopíruj(priečinok + "/knižnica/package-summary.html",
 			// 		priečinok + "/index-bak.htm", true);
-			// 	System.out.println("Súbor „package-summary.html“ " +
+			// 	writeln("Súbor „package-summary.html“ " +
 			// 		"bol zálohovaný do súboru „index-bak.htm“.");
 			// }
 			// catch (Exception e)
 			// {
-			// 	System.err.println(e.getMessage());
+			// 	errorln(e.getMessage());
 			// }
 
 
@@ -2141,7 +2244,7 @@ public class RoboDoc extends GRobot
 			{
 				// Súbor.kopíruj("inherit.gif", priečinok +
 				// 	"/resources/inherit.gif", true);
-				// System.out.println("Súbor „inherit.gif“ " +
+				// writeln("Súbor „inherit.gif“ " +
 				// 	"bol úspešne skopírovaný…");
 				Súbor.vytvorPriečinok(priečinok + "/resources");
 
@@ -2149,23 +2252,23 @@ public class RoboDoc extends GRobot
 				{
 					Súbor.kopíruj("zoznam-zmien.html",
 						priečinok + "/zoznam-zmien.html", true);
-					System.out.println("Súbor „zoznam-zmien.html“ " +
+					writeln("Súbor „zoznam-zmien.html“ " +
 						"bol úspešne skopírovaný…");
 				}
 				catch (Exception e)
 				{
-					System.out.println(" " + e.getMessage());
+					writeln(" " + e.getMessage());
 				}
 
 				try
 				{
 					Súbor.kopíruj("script.js", priečinok + "/script.js", true);
-					System.out.println("Súbor „script.js“ " +
+					writeln("Súbor „script.js“ " +
 						"bol úspešne skopírovaný…");
 				}
 				catch (Exception e)
 				{
-					System.out.println(" " + e.getMessage());
+					writeln(" " + e.getMessage());
 				}
 
 				// Ďalšie súbory (neprepisované automaticky):
@@ -2181,52 +2284,52 @@ public class RoboDoc extends GRobot
 					{
 						Súbor.kopíruj("zdroje/" + ďalší,
 							priečinok + "/resources/" + ďalší, false);
-						System.out.println("Súbor „" + ďalší +
+						writeln("Súbor „" + ďalší +
 							"“ bol úspešne skopírovaný…");
 					}
 					catch (Exception e)
 					{
-						System.out.println(" " + e.getMessage());
+						writeln(" " + e.getMessage());
 					}
 				}
 
-				System.out.println("Kopírujem obrázky…");
+				writeln("Kopírujem obrázky…");
 				String obrázky[] = Súbor.zoznamSúborov("zdroje");
 				for (String obrázok : obrázky)
 				{
 					if (obrázok.endsWith(".png") || obrázok.endsWith(".gif") ||
 						obrázok.endsWith(".svg") || obrázok.endsWith(".jpeg"))
 					{
-						System.out.print("Kopírujem obrázok: " + obrázok);
+						write("Kopírujem obrázok: " + obrázok);
 						try
 						{
 							Súbor.kopíruj("zdroje/" + obrázok, priečinok +
 								"/resources/" + obrázok, false);
-							System.out.println(" OK");
+							writeln(" OK");
 						}
 						catch (Exception e)
 						{
-							System.out.println(" " + e.getMessage());
+							writeln(" " + e.getMessage());
 						}
 					}
 				}
 
-				System.out.println("Kopírujem zvuky…");
+				writeln("Kopírujem zvuky…");
 				String zvuky[] = Súbor.zoznamSúborov("zdroje");
 				for (String zvuk : zvuky)
 				{
 					if (zvuk.endsWith(".wav"))
 					{
-						System.out.print("Kopírujem zvuk: " + zvuk);
+						write("Kopírujem zvuk: " + zvuk);
 						try
 						{
 							Súbor.kopíruj("zdroje/" + zvuk, priečinok +
 								"/resources/" + zvuk, false);
-							System.out.println(" OK");
+							writeln(" OK");
 						}
 						catch (Exception e)
 						{
-							System.out.println(" " + e.getMessage());
+							writeln(" " + e.getMessage());
 						}
 					}
 				}
@@ -2238,7 +2341,7 @@ public class RoboDoc extends GRobot
 						"Allow from all\n</FilesMatch>");
 					súbor.zavri();
 
-					System.out.println("Súbor garantujúci prístup k súboru " +
+					writeln("Súbor garantujúci prístup k súboru " +
 						"s aktuálnou verziou z webu bol vytvorený…");
 				}
 
@@ -2249,7 +2352,7 @@ public class RoboDoc extends GRobot
 						"Allow from all\n</FilesMatch>");
 					súbor.zavri();
 
-					System.out.println("Súbor garantujúci prístup k ďalším " +
+					writeln("Súbor garantujúci prístup k ďalším " +
 						"zdrojom z webu bol vytvorený…");
 				}*/
 
@@ -2259,22 +2362,22 @@ public class RoboDoc extends GRobot
 					substring(1));
 				súbor.zavri();
 
-				System.out.println("Súbor s aktuálnou verziou " +
+				writeln("Súbor s aktuálnou verziou " +
 					"bol vytvorený…");
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 		}
 
 		if (!Súbor.existuje(priečinok + separator + "class-use"))
 		{
 			if (new java.io.File(priečinok + separator + "class-use").mkdir())
-				System.out.println("Priečinok " + priečinok + "class-use" +
+				writeln("Priečinok " + priečinok + "class-use" +
 					" vytvorený…");
 			else
-				System.out.println("Vytvorenie priečinka " + priečinok +
+				writeln("Vytvorenie priečinka " + priečinok +
 					separator + "class-use" + " zlyhalo…");
 		}
 
@@ -2297,7 +2400,7 @@ public class RoboDoc extends GRobot
 			if ((Súbor.existuje(cieľ) && !Súbor.vymaž(cieľ)) ||
 				!Súbor.premenuj(zdroj, cieľ))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " + zdroj);
+				errorln("Zlyhalo premenovanie súboru: " + zdroj);
 				// obsahSúboru.nahraď(i, riadok.toString());
 				// ++početZmien;
 			}
@@ -2315,7 +2418,7 @@ public class RoboDoc extends GRobot
 			if ((Súbor.existuje(cieľ) && !Súbor.vymaž(cieľ)) ||
 				!Súbor.premenuj(zdroj, cieľ))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " + zdroj);
+				errorln("Zlyhalo premenovanie súboru: " + zdroj);
 				// obsahSúboru.nahraď(i, riadok.toString());
 				// ++početZmien;
 			}
@@ -2334,7 +2437,7 @@ public class RoboDoc extends GRobot
 			if ((Súbor.existuje(cieľ) && !Súbor.vymaž(cieľ)) ||
 				!Súbor.premenuj(zdroj, cieľ))
 			{
-				System.err.println("Zlyhalo premenovanie súboru " +
+				errorln("Zlyhalo premenovanie súboru " +
 					"použitia metód: " + zdroj);
 				// obsahSúboru.nahraď(i, riadok.toString());
 				// ++početZmien;
@@ -2352,7 +2455,7 @@ public class RoboDoc extends GRobot
 			if ((Súbor.existuje(cieľ) && !Súbor.vymaž(cieľ)) ||
 				!Súbor.premenuj(zdroj, cieľ))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " + zdroj);
+				errorln("Zlyhalo premenovanie súboru: " + zdroj);
 				// obsahSúboru.nahraď(i, riadok.toString());
 				// ++početZmien;
 			}
@@ -2368,19 +2471,19 @@ public class RoboDoc extends GRobot
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 		}
 
 		if (robodoc)
 		{
-			System.out.println("Preklad a doplnenie…");
+			writeln("Preklad a doplnenie…");
 
 			// Úprava indexu:
 			{
 				aktuálnaPoložka = "index.html";
 				čítajSúbor(priečinok + separator + aktuálnaPoložka);
 				int zmien = aktualizujSúbor(pridajDoPackage, nahraďVPackage);
-				System.out.println("Počet zmien " +
+				writeln("Počet zmien " +
 					aktuálnaPoložka + ": " + zmien);
 				if (zmien > 0) uložSúbor();
 			}
@@ -2401,7 +2504,7 @@ public class RoboDoc extends GRobot
 							pridajDoHTML, nahraďVHTML);
 						// zmien += aktualizujSúbor(
 						// 	pridajDoHTML, premenujSúbory);
-						System.out.println("Počet zmien " + aktuálnyPriečinok +
+						writeln("Počet zmien " + aktuálnyPriečinok +
 							aktuálnaPoložka + ": " + zmien);
 						if (zmien > 0) uložSúbor();
 
@@ -2412,7 +2515,7 @@ public class RoboDoc extends GRobot
 					// {
 					// 	// čítajSúbor(aktuálnyPriečinok + aktuálnaPoložka);
 					// 	// int zmien = aktualizujSúbor(pridajDoCSS, nahraďVCSS);
-					// 	// System.out.println("Počet zmien " +
+					// 	// writeln("Počet zmien " +
 					// 	// 	aktuálnaPoložka + ": " + zmien);
 					// 	// if (zmien > 0) uložSúbor();
 					// }
@@ -2420,44 +2523,44 @@ public class RoboDoc extends GRobot
 
 				if (0 != i) break;
 
-				System.out.println("\nDruhá fáza\n");
+				writeln("\nDruhá fáza\n");
 				// Druhá iterácia bude so súbormi v podpriečinku „class-use“:
 				try
 				{
 					aktuálnyPriečinok = priečinok + separator + "class-use";
 					zoznam = Súbor.zoznam(aktuálnyPriečinok);
 					// for (String položka : zoznam)
-					// 	System.out.print(položka + " ");
-					// System.out.println();
+					// 	write(položka + " ");
+					// writeln();
 					aktuálnyPriečinok += separator;
 				}
 				catch (Exception e)
 				{
-					System.err.println(e.getMessage());
+					errorln(e.getMessage());
 				}
-				// System.out.println("\n");
+				// writeln("\n");
 			}
 
 
-			System.out.println("vytvorSúborKategórií();");
+			writeln("vytvorSúborKategórií();");
 			vytvorSúborKategórií();
-			System.out.println("naplňSúborKategórií()");
+			writeln("naplňSúborKategórií()");
 			naplňSúborKategórií();
-			System.out.println("dokočiSúborKategórií()");
+			writeln("dokočiSúborKategórií()");
 			dokočiSúborKategórií();
-			System.out.println("--");
+			writeln("--");
 
 
 			try
 			{
 				Súbor.kopíruj("kategorie-metod.html",
 					priečinok + "/kategorie-metod.html", true);
-				System.out.println("Súbor „kategorie-metod.html“ " +
+				writeln("Súbor „kategorie-metod.html“ " +
 					"bol úspešne skopírovaný…");
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 
 
@@ -2467,19 +2570,19 @@ public class RoboDoc extends GRobot
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 		}
 
 		/*if (htmlclean)
 		{
-			System.out.println("Čistenie položiek nástrojom HtmlCleaner…");
+			writeln("Čistenie položiek nástrojom HtmlCleaner…");
 
 			for (String položka : zoznam)
 			{
 				if (položka.endsWith(".html"))
 				{
-					System.out.print("Cleaning " + položka + ": ");
+					write("Cleaning " + položka + ": ");
 
 					exec("java -jar .." + separator + "HtmlCleaner" +
 						separator + "htmlcleaner-2.2.jar src=" + priečinok +
@@ -2490,21 +2593,21 @@ public class RoboDoc extends GRobot
 			}
 		}*/
 
-		System.out.println("Dokončené…\n\nKontrola štatistík:\n");
+		writeln("Dokončené…\n\nKontrola štatistík:\n");
 
 		int check = 0;
 		for (Map.Entry<String, Integer> položka : štatistika.entrySet())
 		{
 			if (0 == položka.getValue())
 			{
-				System.out.println("    Nasledujúce pravidlo " +
+				writeln("    Nasledujúce pravidlo " +
 					"nebolo ani raz použité: " + položka.getKey());
 				++check;
 			}
 		}
-		if (0 == check) System.out.println("    Žiadne nepoužité pravidlá.");
+		if (0 == check) writeln("    Žiadne nepoužité pravidlá.");
 
-		System.out.println("\nKontrola dokončená…");
+		writeln("\nKontrola dokončená…");
 	}
 
 
@@ -2512,7 +2615,7 @@ public class RoboDoc extends GRobot
 	{
 		try
 		{
-			System.out.println("Executing: " + command);
+			writeln("Executing: " + command);
 			Process p = Runtime.getRuntime().exec(command);
 
 			java.io.BufferedReader stdInput = new java.io.BufferedReader(
@@ -2524,14 +2627,14 @@ public class RoboDoc extends GRobot
 			String s = null;
 			while ((s = stdInput.readLine()) != null)
 			{
-				System.out.println(s);
+				writeln(s);
 			}
 
 			while ((s = stdError.readLine()) != null)
 			{
-				System.err.println(s);
+				errorln(s);
 			}
-			System.out.println("Execution finished.");
+			writeln("Execution finished.");
 		}
 		catch (Exception e)
 		{
@@ -2547,7 +2650,7 @@ public class RoboDoc extends GRobot
 		{
 			obsahSúboru.vymaž();
 
-			// System.out.println("Čítam súbor: " + názovSúboru);
+			// writeln("Čítam súbor: " + názovSúboru);
 			súbor.otvorNaČítanie(názovSúboru);
 
 			String riadok; int počet = 0;
@@ -2558,12 +2661,12 @@ public class RoboDoc extends GRobot
 			}
 
 			súbor.zavri();
-			// System.out.println("Prečítaných " + počet +
+			// writeln("Prečítaných " + počet +
 			// 	" riadkov zo súboru: " + názovSúboru);
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 		}
 	}
 
@@ -2623,7 +2726,7 @@ public class RoboDoc extends GRobot
 			pozícia2 = riadok.indexOf(čo);
 			if (-1 != pozícia2 && pozícia2 <= pozícia + dĺžka)
 			{
-				System.out.println("  *** Vážna chyba! *** " +
+				writeln("  *** Vážna chyba! *** " +
 					"Rekurzívne nahrádzanie: \n" +
 					"    Riadok:    " + riadok + "\n" +
 					"    Čo:        " + čo + "\n" +
@@ -2652,7 +2755,7 @@ public class RoboDoc extends GRobot
 
 		int zmažMedzery = 0;
 
-		// System.out.println("DEBUG: položka: " + aktuálnaPoložka);
+		// writeln("DEBUG: položka: " + aktuálnaPoložka);
 
 		for (int i = 0; i < obsahSúboru.veľkosť(); ++i)
 		{
@@ -2968,7 +3071,7 @@ public class RoboDoc extends GRobot
 
 			if (zmažMedzery > 0)
 			{
-				// System.out.println(riadok.toString());
+				// writeln(riadok.toString());
 				int znakovNaZmazanie = 0;
 
 				for (int j = 0; j < zmažMedzery && j < riadok.length(); ++j)
@@ -2984,7 +3087,7 @@ public class RoboDoc extends GRobot
 
 				if (-1 != riadok.indexOf("</pre>"))
 				{
-					// System.out.println("End: " + riadok.toString() + '\n');
+					// writeln("End: " + riadok.toString() + '\n');
 					zmažMedzery = 0;
 				}
 
@@ -3003,33 +3106,33 @@ public class RoboDoc extends GRobot
 
 					obsahSúboru.nahraď(i, riadok.toString());
 					++početZmien;
-					// System.out.println(riadok.toString() + '\n');
+					// writeln(riadok.toString() + '\n');
 				}
 			}
 			else if (-1 != riadok.indexOf("<pre CLASS=\"example\">"))
 			{
-				// System.out.println("\nStart: " + riadok.toString());
+				// writeln("\nStart: " + riadok.toString());
 				zmažMedzery = -1;
 			}
 			// else if (-1 != riadok.indexOf("<pre"))
 			// {
-			// 	// System.out.println("\nPRE: " + riadok.toString());
+			// 	// writeln("\nPRE: " + riadok.toString());
 			// }
 
 
 			for (int j = 0; j + 1 < nahraď.length; j += 2)
 			{
-				// System.out.print("DEBUG: nahraď: " + nahraď[j]);
+				// write("DEBUG: nahraď: " + nahraď[j]);
 
 				if (nahraď(riadok, nahraď[j], nahraď[j + 1]))
 				{
-					// System.out.print(" +");
+					// write(" +");
 					obsahSúboru.nahraď(i, riadok.toString());
 					++početZmien;
 				}
-				// else System.out.print(" -");
+				// else write(" -");
 
-				// System.out.println();
+				// writeln();
 			}
 		}
 
@@ -3185,7 +3288,7 @@ public class RoboDoc extends GRobot
 					if (null == poslednáTrieda)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Metóda " +
 							poslednáMetóda + " nie je zaradená v žiadnom " +
 							"súbore. Okolo riadka: " + (i - 1));
@@ -3194,7 +3297,7 @@ public class RoboDoc extends GRobot
 					if (null == poslednáKategória)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Metóda " +
 							poslednáMetóda + " nie je zaradená v žiadnej " +
 							"kategórii. Okolo riadka: " + (i - 1));
@@ -3219,7 +3322,7 @@ public class RoboDoc extends GRobot
 					if (null != over && null != poslednýZoznamParametrov)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Metóda " +
 							poslednáMetóda + " s aktuálnymi parametrami " +
 							"už je zaradená v tejto kategórii. Okolo " +
@@ -3239,14 +3342,14 @@ public class RoboDoc extends GRobot
 					if (null == poslednáMetóda)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Parametre na riadku " +
 							i + " nepatria žiadnej metóde");
 					}
 					else if (null != poslednýZoznamParametrov)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Metóda " +
 							poslednáMetóda + " má definovaný zdvojený " +
 							"zoznam parametrov. Riadok: " + i);
@@ -3264,7 +3367,7 @@ public class RoboDoc extends GRobot
 					if (null == poslednáTrieda)
 					{
 						++početChýb;
-						System.out.println("  Varovanie! Chyba v súbore " +
+						writeln("  Varovanie! Chyba v súbore " +
 							"s definíciami kategórií. Kategória " +
 							poslednáKategória + " nie je zaradená v žiadnom " +
 							"súbore. Okolo riadka: " + (i - 1));
@@ -3288,7 +3391,7 @@ public class RoboDoc extends GRobot
 			}
 
 			if (0 == početChýb)
-				System.out.println("Súbor s kategóriami bol " +
+				writeln("Súbor s kategóriami bol " +
 					"prečítaný bez chýb.");
 
 			súbor.zavri();
@@ -3296,7 +3399,7 @@ public class RoboDoc extends GRobot
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -3403,7 +3506,7 @@ public class RoboDoc extends GRobot
 
 		if (null == všetkyKategórie.get(názovTriedy))
 		{
-			System.out.println("Súbor „" + jadroNázvuSúboru + "“ (trieda „" +
+			writeln("Súbor „" + jadroNázvuSúboru + "“ (trieda „" +
 				názovTriedy + "“) nemá definované kategórie. (Preskakujem…)");
 			return;
 		}
@@ -3418,7 +3521,7 @@ public class RoboDoc extends GRobot
 		String typ = null, určenie = null, odkaz = null, názov = null,
 			parametre = null, stručnýOpis = null;
 
-		System.out.println("Triedim kategórie súboru " + názovSúboru);
+		writeln("Triedim kategórie súboru " + názovSúboru);
 		// if (true) return;
 
 
@@ -3455,42 +3558,42 @@ public class RoboDoc extends GRobot
 						{
 							if (null != odkaz)
 							{
-								System.out.println("  Varovanie! Nastalo " +
+								writeln("  Varovanie! Nastalo " +
 									"prepísanie odkazu. Riadok: " + i);
-								System.out.println("    Pôvodný odkaz: " +
+								writeln("    Pôvodný odkaz: " +
 									odkaz);
 							}
 							odkaz = match.group(1);
 
 							if (null != názov)
 							{
-								System.out.println("  Varovanie! Nastalo " +
+								writeln("  Varovanie! Nastalo " +
 									"prepísanie názvu. Riadok: " + i);
-								System.out.println("    Pôvodný názov: " +
+								writeln("    Pôvodný názov: " +
 									názov);
 							}
 							názov = match.group(2);
 
 							if (null != parametre)
 							{
-								System.out.println("  Varovanie! Nastalo " +
+								writeln("  Varovanie! Nastalo " +
 									"prepísanie parametrov. Riadok: " + i);
-								System.out.println("    Pôvodné parametre: " +
+								writeln("    Pôvodné parametre: " +
 									parametre);
 							}
 							parametre = match.group(3);
 						}
 						else
 						{
-							System.out.println("  Varovanie! Určenie " +
+							writeln("  Varovanie! Určenie " +
 								"sa nepodarilo rozpoznať. (Koniec " +
 								"definície je na riadku: " + i + ")");
-							System.out.println("    Určenie: " + určenie);
+							writeln("    Určenie: " + určenie);
 						}
 					}
 					else
 					{
-						System.out.println("  Chyba, nenašlo sa určenie!");
+						writeln("  Chyba, nenašlo sa určenie!");
 					}
 
 					if (null != stručnýOpis)
@@ -3499,39 +3602,39 @@ public class RoboDoc extends GRobot
 					if (null == typ || null == odkaz || null == názov ||
 						null == parametre || null == stručnýOpis)
 					{
-						System.out.println("\n  Riadok: " + i);
+						writeln("\n  Riadok: " + i);
 
 						if (null != typ)
-							System.out.println("    Typ: " + typ);
+							writeln("    Typ: " + typ);
 						if (null != odkaz)
-							System.out.println("    Odkaz: " + odkaz);
+							writeln("    Odkaz: " + odkaz);
 						if (null != názov)
-							System.out.println("    Názov: " + názov);
+							writeln("    Názov: " + názov);
 						if (null != parametre)
-							System.out.println("    Parametre: " + parametre);
+							writeln("    Parametre: " + parametre);
 						if (null != stručnýOpis)
-							System.out.println("    Stručný opis: " +
+							writeln("    Stručný opis: " +
 								stručnýOpis);
 
 						if (null == typ)
-							System.out.println("  Chyba, nenašiel sa typ!");
+							writeln("  Chyba, nenašiel sa typ!");
 						if (null == odkaz)
-							System.out.println("  Chyba, nenašiel sa odkaz!");
+							writeln("  Chyba, nenašiel sa odkaz!");
 						if (null == názov)
-							System.out.println("  Chyba, nenašiel sa názov!");
+							writeln("  Chyba, nenašiel sa názov!");
 						if (null == parametre)
-							System.out.println("  Chyba, nenašli sa " +
+							writeln("  Chyba, nenašli sa " +
 								"parametre!");
 						if (null == stručnýOpis)
-							System.out.println("  Chyba, nenašiel sa " +
+							writeln("  Chyba, nenašiel sa " +
 								"stručný opis!");
-						System.out.println();
+						writeln();
 					}
 
 					// Zaraďovanie nájdených záznamov do kategórií
 					else
 					{
-						// System.out.println(typ + "\n  " + názov);
+						// writeln(typ + "\n  " + názov);
 
 						KategóriePodľaParametrov zoznamPodľaParametrov = null;
 						ParametrePodľaMetódy metódy =
@@ -3539,7 +3642,7 @@ public class RoboDoc extends GRobot
 
 						if (null == metódy)
 						{
-							System.err.println("  Chyba! Trieda „" +
+							errorln("  Chyba! Trieda „" +
 								názovTriedy + "“ nebola nájdená " +
 								"v prečítanej konfigurácii.");
 						}
@@ -3549,7 +3652,7 @@ public class RoboDoc extends GRobot
 
 							if (null == zoznamPodľaParametrov)
 							{
-								System.err.println("  Chyba! Metóda „" +
+								errorln("  Chyba! Metóda „" +
 									názov + "“ nebola nájdená v prečítanej " +
 									"konfigurácii triedy „" + názovTriedy +
 									"“.");
@@ -3564,7 +3667,7 @@ public class RoboDoc extends GRobot
 
 								if (null == kategória)
 								{
-									System.err.println("  Chyba! Neboli " +
+									errorln("  Chyba! Neboli " +
 										"nájdené použiteľné parametre " +
 										"v prečítanej konfigurácii metódy „" +
 										názov + "“ triedy „" + názovTriedy +
@@ -3594,9 +3697,9 @@ public class RoboDoc extends GRobot
 					{
 						if (null != určenie)
 						{
-							System.out.println("  Varovanie! Nastalo " +
+							writeln("  Varovanie! Nastalo " +
 								"prepísanie určenia. Riadok: " + i);
-							System.out.println("    Pôvodné určenie: " +
+							writeln("    Pôvodné určenie: " +
 								určenie);
 						}
 						určenie = riadok.substring(55);
@@ -3617,9 +3720,9 @@ public class RoboDoc extends GRobot
 					{
 						if (null != stručnýOpis)
 						{
-							System.out.println("  Varovanie! Nastalo " +
+							writeln("  Varovanie! Nastalo " +
 								"prepísanie stručného opisu. Riadok: " + i);
-							System.out.println("    Pôvodný opis: " +
+							writeln("    Pôvodný opis: " +
 								stručnýOpis);
 						}
 						stručnýOpis = riadok.substring(19);
@@ -3639,9 +3742,9 @@ public class RoboDoc extends GRobot
 						{
 							if (null != typ)
 							{
-								System.out.println("  Varovanie! Nastalo " +
+								writeln("  Varovanie! Nastalo " +
 									"prepísanie typu. Riadok: " + i);
-								System.out.println("    Pôvodný typ: " + typ);
+								writeln("    Pôvodný typ: " + typ);
 							}
 							typ = "";
 							if (null != match.group(1)) typ += match.group(1);
@@ -3651,7 +3754,7 @@ public class RoboDoc extends GRobot
 						}
 						else
 						{
-							System.out.println("  Varovanie! Neznáme údaje " +
+							writeln("  Varovanie! Neznáme údaje " +
 								"na riadku: " + i);
 						}
 					}
@@ -3692,10 +3795,10 @@ public class RoboDoc extends GRobot
 		}
 
 		if (0 != stav)
-			System.out.println("  Varovanie! " +
+			writeln("  Varovanie! " +
 				"Predčasné ukončenie údajov. Riadok: " + i);
 		else
-			System.out.println("Kategórie súboru " +
+			writeln("Kategórie súboru " +
 				názovSúboru + " dokončené.");
 	}
 
@@ -3747,7 +3850,7 @@ public class RoboDoc extends GRobot
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 		}
 	}
 
@@ -3767,7 +3870,7 @@ public class RoboDoc extends GRobot
 			KategórieMetód kategórieMetód = kategorizovanýSúbor.getValue();
 			if (kategórieMetód.isEmpty())
 			{
-				System.err.println("  Chyba! Kategorizované údaje súboru „" +
+				errorln("  Chyba! Kategorizované údaje súboru „" +
 					kategórieMetód.jadroNázvuSúboru + "“ neboli nájdené!");
 				continue;
 			}
@@ -3787,10 +3890,10 @@ public class RoboDoc extends GRobot
 					if (názovKategórie.equals("Ignorované")) continue;
 					String id; Matcher match;
 
-					// System.out.println("pred: " + názovKategórie);
+					// writeln("pred: " + názovKategórie);
 					match = odstráňHTML.matcher(názovKategórie);
 					názovKategórie = match.replaceAll("");
-					// System.out.println("po: " + názovKategórie);
+					// writeln("po: " + názovKategórie);
 
 					match = extrahujIDKategórie.matcher(názovKategórie);
 
@@ -3819,7 +3922,7 @@ public class RoboDoc extends GRobot
 					// 	kategórieMetód.get(názovKategórie);
 					// if (null == zoznamMetód)
 					// {
-					// 	System.out.println("CHYBA…");
+					// 	writeln("CHYBA…");
 					// }
 					// else
 					// {
@@ -3863,7 +3966,7 @@ public class RoboDoc extends GRobot
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 
 			boolean altRow = true;
@@ -3895,7 +3998,7 @@ public class RoboDoc extends GRobot
 				}
 				catch (Exception e)
 				{
-					System.err.println(e.getMessage());
+					errorln(e.getMessage());
 				}
 
 				for (ZáznamOMetóde metóda : kategória.getValue())
@@ -3931,7 +4034,7 @@ public class RoboDoc extends GRobot
 					}
 					catch (Exception e)
 					{
-						System.err.println(e.getMessage());
+						errorln(e.getMessage());
 					}
 				}
 			}
@@ -3944,7 +4047,7 @@ public class RoboDoc extends GRobot
 			}
 			catch (Exception e)
 			{
-				System.err.println(e.getMessage());
+				errorln(e.getMessage());
 			}
 		}
 	}
@@ -3958,7 +4061,7 @@ public class RoboDoc extends GRobot
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 		}
 	}
 
@@ -3978,7 +4081,7 @@ public class RoboDoc extends GRobot
 		}
 		catch (Exception e)
 		{
-			System.err.println(e.getMessage());
+			errorln(e.getMessage());
 		}
 	}
 
@@ -4043,7 +4146,7 @@ public class RoboDoc extends GRobot
 
 		/*if (false)
 		{
-			System.err.println("Je mi ľúto, ale 9. 8. 2018, tesne po " +
+			errorln("Je mi ľúto, ale 9. 8. 2018, tesne po " +
 				"obrovskej revízii programovacieho rámca (resp. po jeho " +
 				"transformácii z knižnice na rámec) prestala táto " +
 				"utilita reagovať po spracovaní triedy Konstanty.java.");
@@ -4057,7 +4160,7 @@ public class RoboDoc extends GRobot
 		// Zvuk zvuk = Svet.čítajZvuk(
 		// 	"/Users/romanhorvath/_Sync/Vyucba/Denne/2011 - " +
 		// 	"Zima/ST1-odovzdané/Meliš/applause.wav");
-		// System.out.println(zvuk.hlasitosťNepodporovaná());
+		// writeln(zvuk.hlasitosťNepodporovaná());
 
 		Svet.skry();
 		new RoboDoc();
@@ -4097,7 +4200,7 @@ public class RoboDoc extends GRobot
 			"Tlacc-Slovo", "Tlacc-Fragment", "Tlacc-Parametre",
 			"Tlacc-RiadokSlov", "Tlacc-BlokSlov", "Tlacc", "Tlac"}) try
 		{
-			System.out.println("Dodatočné spracovanie súboru: robodoc/" +
+			writeln("Dodatočné spracovanie súboru: robodoc/" +
 				meno + " (prevod HTML súboru na PHP súbor, ktorý bude " +
 				"dostupný „bez prípony“)");
 			preveďHTMLnaPHP("robodoc/" + meno);
@@ -4134,7 +4237,7 @@ public class RoboDoc extends GRobot
 			"Zoznam-ObraatenyyIteraator", "Zoznam", "Zvuk", "UUdajeUdalostii",
 			"CCastica"}) try
 		{
-			System.out.println("Dodatočné spracovanie súboru: " +
+			writeln("Dodatočné spracovanie súboru: " +
 				"robodoc/class-use/" + meno + " (prevod HTML súboru " +
 				"na PHP súbor, ktorý bude dostupný „bez prípony“)");
 			preveďHTMLnaPHP("robodoc/class-use/" + meno);
@@ -4150,13 +4253,13 @@ public class RoboDoc extends GRobot
 				"/resources/rastlinka-svg.html",
 				priečinok + "/resources/rastlinka-svg.php"))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " +
+				errorln("Zlyhalo premenovanie súboru: " +
 					"rastlinka-svg.html" + ". Asi už jestvuje " +
 					"prislúchajúci .php súbor. Overte, či má súbor " +
 					"aktuálny obsah.");
 				if (!Súbor.vymaž(priečinok +
 					"/resources/rastlinka-svg.html"))
-					System.err.println("  Súbor nemohol byť vymazaný. " +
+					errorln("  Súbor nemohol byť vymazaný. " +
 						"Môže vznikať redundancia.");
 			}
 		}
@@ -4171,13 +4274,13 @@ public class RoboDoc extends GRobot
 				"/resources/howto-distance-segment-to-segment.html",
 				priečinok + "/resources/howto-distance-segment-to-segment.php"))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " +
+				errorln("Zlyhalo premenovanie súboru: " +
 					"howto-distance-segment-to-segment.html" +
 					". Asi už jestvuje prislúchajúci .php súbor. " +
 					"Overte, či má súbor aktuálny obsah.");
 				if (!Súbor.vymaž(priečinok +
 					"/resources/howto-distance-segment-to-segment.html"))
-					System.err.println("  Súbor nemohol byť vymazaný. " +
+					errorln("  Súbor nemohol byť vymazaný. " +
 						"Môže vznikať redundancia.");
 			}
 		}
@@ -4192,13 +4295,13 @@ public class RoboDoc extends GRobot
 				"/resources/apache-licence-2.0.html",
 				priečinok + "/resources/apache-licence-2.0.php"))
 			{
-				System.err.println("Zlyhalo premenovanie súboru: " +
+				errorln("Zlyhalo premenovanie súboru: " +
 					"apache-licence-2.0.html" + ". Asi už jestvuje " +
 					"prislúchajúci .php súbor. Overte, či má súbor " +
 					"aktuálny obsah.");
 				if (!Súbor.vymaž(priečinok +
 					"/resources/apache-licence-2.0.html"))
-					System.err.println("  Súbor nemohol byť vymazaný. " +
+					errorln("  Súbor nemohol byť vymazaný. " +
 						"Môže vznikať redundancia.");
 			}
 		}

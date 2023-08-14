@@ -184,9 +184,14 @@ $1
 
 Hľadanie dvojitých prázdnych riadkov (pridanie čiar):
 <pre\b(?:\p{all}(?<!</pre))*\n\n\n
-Treba nahradiť (tesne prilepené, lebo to aj tak zobrazuje voľný riadok
-pred a za):
+
 <hr/>
+
+Poznámky:
+	Ak je vo výsledku čiara odsadená, tak <hr/> treba nahradiť tesne
+	prilepené, lebo vtedy to zobrazuje voľný riadok pred a za. Ak má
+	vo výsledku čiara  nulové odsadenie zľava, tak treba pred ňu dať
+	jeden voľný riadok, lebo vtedy sa pridáva voľný riadok len za ňu.
 
 
 Kontrola chýb v komentároch:

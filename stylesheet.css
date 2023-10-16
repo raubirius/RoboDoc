@@ -916,6 +916,15 @@ table.tightTable, table.tightTable tr td
 table.tightTable td { margin: 0px; }
 
 
+table.innerHorizontalLines {
+	border-collapse: collapse;
+}
+
+table.innerHorizontalLines tr + tr td, table.innerHorizontalLines tr + tr th {
+	border-top: 1px solid #EEE;
+}
+
+
 table caption { display: none; }
 ul.inheritance { list-style: none; }
 ul.inheritance ul.inheritance li:first-child

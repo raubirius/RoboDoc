@@ -2339,6 +2339,13 @@ public class RoboDoc extends GRobot
 					}
 				}
 
+				// (synchronizovanie dátumov súborov štýlu)
+				try { if (Súbor.porovnaj(priečinok + "stylesheet.css",
+					"./stylesheet.css")) Súbor.naposledyUpravený(priečinok +
+					"stylesheet.css", Súbor.naposledyUpravený(
+						"./stylesheet.css")); } catch (Throwable t) { /*
+						absolútne nepodstatné, ignorované */ }
+
 				if (!Súbor.jestvuje(priečinok + "/.htaccess"))
 				{
 					súbor.otvorNaZápis(priečinok + "/.htaccess");

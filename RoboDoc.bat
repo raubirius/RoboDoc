@@ -19,7 +19,7 @@ if not exist "%rodocPath%\%rodocName%.class" (
 	goto :eof
 )
 
-"%javaPath%\java" -Dfile.encoding=UTF8 -jar "c:\_jEdit\launcher.jar" "%rodocPath%\launch-%rodoc%.txt" "%javaPath%" -q
+"%javaPath%\java" -Dfile.encoding=UTF8 -jar "c:\_jEdit\launcher.jar" "%rodocPath%\launch-%rodocName%.txt" "%javaPath%" -q
 
 echo.
 echo Finished.

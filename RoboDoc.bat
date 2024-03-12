@@ -24,3 +24,8 @@ if not exist "%rodocPath%\%rodocName%.class" (
 echo.
 echo Finished.
 echo.
+
+if not "-nowait" == "%1" (
+	echo Press any key.
+	@pause>nul
+)

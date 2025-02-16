@@ -136,6 +136,12 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 
 <p>(pracuje sa)</p>
 
+<p>Opravená chyba pri kreslení vlastného tvaru v súvislosti s obnovovaním všetkých atribútov robota zo zálohy po ukončení kreslenia. (Bol tam pridaný blok <code>try-finally</code>, pretože keď počas kreslenia vlastného tvaru vznikla výnimka, atribúty sa zo zálohy neobnovili.)</p>
+
+<p>Pridaný atribút <code><a href="Svet.html">Svet</a>.<a href="Svet.html#ukladajStavOknaNaVrchu--">ukladajStavOknaNaVrchu</a></code> a jeho korešpondujúca „dvojička“ <code><a href="Svet.html">Svet</a>.<a href="Svet.html#ukladajStavOknaNaVrchu--">ukladajStavOknaNaVrchu</a></code>. (S tým bolo zároveň implementované čítanie a zápis vlastnosti „vždy na vrchu“ okna sveta aj vedľajších okien.)</p>
+
+<p>Doplnený chýbajúci alias <code><a href="Suubor.html">Súbor</a>.<a href="Suubor.html#vymazVlastnosti--">vymazVlastnosti</a></code>.</p>
+
 <p>Opravená chyba pri zmene farieb výpisov textov vnútornej konzoly v rámci skôr pridanej funkčnosti <a href="Plaatno.html#nevypisujFarby-boolean-">nevypisovania farieb.</a></p>
 
 <p>Skorigované správanie triedy <code><a href="Okno.html">Okno</a></code> – klávesová skratka <code>Ctrl + W</code> teraz okno skrýva, aby to bolo konzistentné so systémovou skratkou Alt + F4 (vo Windows – v macOS by to bolo treba ešte dodatočne otestovať).</p>

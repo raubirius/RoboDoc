@@ -2554,11 +2554,11 @@ public class RoboDoc extends GRobot
 			}
 
 
-			writeln("vytvorSúborKategórií();");
+			writeln("Vytvor súbor kategórií");
 			vytvorSúborKategórií();
-			writeln("naplňSúborKategórií()");
+			writeln("Naplň súbor kategórií");
 			naplňSúborKategórií();
-			writeln("dokočiSúborKategórií()");
+			writeln("Dokoči súbor kategórií");
 			dokočiSúborKategórií();
 			writeln("--");
 
@@ -3879,6 +3879,8 @@ public class RoboDoc extends GRobot
 		for (Map.Entry<String, KategórieMetód> kategorizovanýSúbor :
 			všetkyKategorizovanéSúbory.entrySet())
 		{
+			writeln("  k. súbor: " + kategorizovanýSúbor.getKey());
+
 			KategórieMetód kategórieMetód = kategorizovanýSúbor.getValue();
 			if (kategórieMetód.isEmpty())
 			{
@@ -3896,6 +3898,8 @@ public class RoboDoc extends GRobot
 			for (Map.Entry<String, ZoznamMetód>
 				kategória : kategórieMetód.entrySet())
 			{
+				writeln("    k.: " + kategória.getKey());
+
 				// for (String názovKategórie : metódy.zoznamKategórií)
 				{
 					String názovKategórie = kategória.getKey();
@@ -3982,10 +3986,13 @@ public class RoboDoc extends GRobot
 			}
 
 			boolean altRow = true;
+			writeln();
 
 			for (Map.Entry<String, ZoznamMetód>
 				kategória : kategórieMetód.entrySet())
 			{
+				writeln("  kategória:" + kategória.getKey());
+
 				String názovKategórie = kategória.getKey();
 				if (názovKategórie.equals("Ignorované")) continue;
 				Matcher match = extrahujIDKategórie.matcher(názovKategórie);
@@ -4015,6 +4022,8 @@ public class RoboDoc extends GRobot
 
 				for (ZáznamOMetóde metóda : kategória.getValue())
 				{
+					writeln("    metóda: " + metóda);
+
 					try
 					{
 						súbor.otvorNaZápis(

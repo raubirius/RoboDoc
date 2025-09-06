@@ -132,11 +132,38 @@ Vysunutie prípadného zoznamu argumentov pred odkaz na metódu:
 <div class="block">
 
 
-<h3>Verzia 2.23 (v procese vývoja)</h3>
+<h3>Verzia 2.26 (v procese vývoja)</h3>
 
 <p>(pracuje sa)</p>
 
-<p>Zmenené dosahovanie cieľa. <!-- TODO copy text from remark in cieľ(…) --></p>
+<p>Opravená chyba pri úprave textov na ploche (pozri metódu <code><a href="GRobot.html#upravText-java.lang.String-double-">upravText</a></code>). Java začala prísnejšie posudzovať <em>tab traversal keys</em> a dávno odladená funkčná vec zrazu prestala fungovať. (Na chybu sa prišlo náhodou. Nedá sa všetko nestále cyklicky kontrolovať.)</p>
+
+
+<h3>Verzia 2.25</h3>
+
+<p>Opravená chyba pri zmene smeru počas kreslenia vlastného tvaru. (Malo sa to správať rovnako ako zmena polohy, ale nesprávalo – implementácia mechanizmu bola nedokončená. Na chybu sa prišlo čítaním kódu pri hľadaní inej chyby.)</p>
+
+<p>Poopravené (sprísnené) správanie gyroskopu. Už by sa nemalo stať, že by gyroskop zaostával o tikov za poslednou zmenou smeru alebo by nebol aplikovaný po vypnutí aktivity.</p>
+
+<p>Pridaná možnosť osvetlenia jednotlivých plátien (<code><a href="Plaatno.html">Plátno</a>.<a href="Plaatno.html#osvetlenie-boolean-">osvetlenie</a>(osvetli)</code>) a sveta (<code><a href="Svet.html">Svet</a>.<a href="Svet.html#osvetlenie-boolean-">osvetlenie</a>(osvetli)</code>).</p>
+
+<p>Opravené (dúfam) nastavovanie interaktívnych inštancií v skriptoch (príkaz <code>@</code><em>«meno»</em>).</p>
+
+
+<h3>Verzia 2.24</h3>
+
+<p><em>Zmeny buď neboli zaznamenané, alebo boli omylom zaznamenané pri verzii 2.23.</em></p>
+
+
+<h3>Verzia 2.23</h3>
+
+<p><em>«Nezaznamenaná zmena.»</em></p>
+
+<p>Vykonané opravy v triede <code><a href="Okno.html">Okno</a></code> (klávesová skratka <code>Ctrl + W</code> už opäť okno neskrýva, aby to bolo skutočne konzistentné so systémovou skratkou Alt + F4 – vo Windows – v macOS by to bolo treba ešte dodatočne otestovať; a rozkladanie komponentov bolo prispôsobené veľkosti vloženého obrázka, podobne ako je to v hlavnom okne prispôsobované veľkosti plátien; to bol najjednoduchší spôsob ako opraviť nekonzistentné správanie mechanizmu rozloženia).</p>
+
+<p>Zrušené automatické vypisovanie obsahu premenných skriptov v režime ladenia. Nenašiel som nikde toto správanie zdokumentované a pôsobilo neočakávane, tak som ho zrušil. (V kóde to však vyzeral byť implementované značne cielene a s konkrétnym cieľom, ale ak som tým v minulosti niečo konkrétne sledoval, už naozaj netuším, čo to bolo.)</p>
+
+<p><b>Zmenené dosahovanie cieľa.</b> Správanie príchodu do cieľa bolo upravené tak, aby robot prosto zastavil vtedy, keď je cieľ na dosah jeho rýchlosti (a neposúval sa automaticky na pozíciu cieľa). Ak je potrebné, aby robot cieľ dosiahol úplne presne, tak to treba zariadiť „ručne“ – v reakcii <a href="GRobot#dosiahnutieCie%C4%BEa--"><code>dosiahnutieCieľa</code></a> (napríklad volaním metódy <a href="GRobot#cho%C4%8FNaCie%C4%BE--"><code>choďNaCieľ</code></a> alebo <a href="GRobot#sko%C4%8DNaCie%C4%BE--"><code>skočNaCieľ</code></a>, prípadne konštrukciou: <code>choďNa(cieľX(), cieľY());</code>).</p>
 
 
 <h3>Verzia 2.22 – naposledy zmenená 19. februára 2025</h3>

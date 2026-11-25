@@ -1866,7 +1866,7 @@ public class RoboDoc extends GRobot
 		"<h2>Používanie diakritiky</h2>\r\n\r\n" +
 		//   ---------------------
 		"<p>Pri programovaní sa z historických dôvodov vždy tolerovalo nepoužívanie diakritiky. Java, Python a iné programovacie jazyky však v súčasnosti už prekonali bariéru nemožnosti používania diakritiky, takže je otázkou, prečo by sme sa stále mali jej používaniu brániť?</p>\r\n\r\n" +
-		"<p>Možno si neuvedomujete, aká je diakritika v slovenčine dôležitá. Prečítajte nasledujúce slová bez diakritiky: bábka, krík, látka, pračka, párenie, koža, posuň, kópia, puška, plát, tvár, brať, zoznám, kočka, moč, šteňa, plást, špinka, zásadne, troška, uhoľ, Mačka, Maťka, Máška, Rúško. Hneď si uvedomíte rozdiel. Niektoré slová po odstránení diakritiky nemajú význam, ale zostanú dvojznačné (napríklad: nákup/nakúp, späť/spať). Skúste bez pomoci vydedukovať, čo by robila nasledujúca metóda nazvaná bez diakritiky takto: <code>vypisNaBode</code>? Je to <code>vypíšNaBode</code> (zápis) alebo <code>výpisNaBode</code> (čítanie)? Správna odpoveď v rámci tohto programovacieho rámca je práve tá druhá. Ďalší príklad: Z nasledujúcich štyroch variantov slov majú tri unikátny význam a jeden je obmenou jedného z trojice (ak ignorujeme homonymický význam): cela, celá, čela, čelá.</p>\r\n\r\n" +
+		"<p>Možno si neuvedomujete, aká je diakritika v slovenčine dôležitá. Prečítajte nasledujúce slová bez diakritiky: bábka, krík, látka, pračka, párenie, pôvodné, koža, posuň, kópia, puška, plát, tvár, brať, zoznám, kočka, šteňa, plást, špinka, zásadne, troška, uhoľ, Mačka, Maťka, Máška, Rúško. <span id='shortWords01' style='display:'><a href='javascript:;' onclick=\"document.getElementById('shortWords01').style.display = 'none'; document.getElementById('shortWords02').style.display = '';\">[+]</a></span><span id='shortWords02' style='display:none'><a href='javascript:;' onclick=\"document.getElementById('shortWords01').style.display = ''; document.getElementById('shortWords02').style.display = 'none';\">[−]</a> (Z kratších: moč, šém, rób, päť, mäť, bôľ, viď, pól/poľ, vši alebo ôs, má, tá/ťa.)</span> Hneď si uvedomíte rozdiel. Niektoré slová po odstránení diakritiky nemajú význam, ale zostanú dvojznačné (napríklad: nákup/nakúp, späť/spať, vôl/voľ). Skúste bez pomoci vydedukovať, čo by robila nasledujúca metóda nazvaná bez diakritiky takto: <code>vypisNaBode</code>? Je to <code>vypíšNaBode</code> (zápis) alebo <code>výpisNaBode</code> (čítanie)? Správna odpoveď v rámci tohto programovacieho rámca je práve tá druhá. Ďalší príklad: Z nasledujúcich štyroch variantov slov majú tri unikátny význam a jeden je obmenou jedného z trojice (ak ignorujeme homonymický význam): cela, celá, čela, čelá.</p>\r\n\r\n" +
 		"<p>V záujme ústretovosti sme sa v tomto rámci pokúsili definovať aliasy všetkých tried, atribútov a metód aj bez diakritiky, no ich používanie neodporúčame. Niekedy nastávajú problémy s kompatibilitou. Niekedy dokonca definovanie kompatibilného aliasu nebolo možné, pretože k návratovej hodnote objektu s diakritikou (napr. <code>Obrázok</code>) bola prisúdená metóda, ktorá žiadnu diakritiku neobsahovala (<code>ikona()</code>), takže k objektu bez diakritiky (<code>Obrazok</code>) nemohla byť definovaná rovnomenná metóda (je to riešené bezdiakritickým „aliasom“ <code>obrazok()</code>).</p>\r\n\r\n" +
 		"<p>O aliasoch a diakritike sa píše aj v spomínaných úvodných pasážach opisu triedy <a href=\"GRobot.html\">GRobot</a>.</p>\r\n\r\n" +
 		"<h2></h2><p><small>(Od verzie 1.0 vyššie je pravidelne aktualizovaný <a href=\"zoznam-zmien.html\">zoznam zmien</a>.)</small></p>\r\n\r\n",
@@ -3478,7 +3478,7 @@ public class RoboDoc extends GRobot
 
 	@SuppressWarnings("serial")
 	private class ZoznamMetód extends Vector<ZáznamOMetóde>
-	{ public String id = null; }
+	{ public String id = null, staréID = null; }
 
 	@SuppressWarnings("serial")
 	private class KategórieMetód extends TreeMap<String, ZoznamMetód>
@@ -3869,7 +3869,7 @@ public class RoboDoc extends GRobot
 	private Súbor šablóna = new Súbor();
 
 	private final static Pattern extrahujIDKategórie =
-		Pattern.compile("‹([^›]+)›");
+		Pattern.compile("(?:‹([^›]+)›|⟨([^⟩]+)⟩)$");
 	private final static Pattern pomocPriTvorbeID =
 		Pattern.compile("([^\\w\\pL]+)");
 	private final static Pattern odstráňHTML = Pattern.compile("<[^>]+>");
@@ -3915,7 +3915,15 @@ public class RoboDoc extends GRobot
 
 					if (match.find())
 					{
-						id = kategórieMetód.id + "-" + match.group(1);
+						String skratka = null == match.group(1) ?
+							match.group(2) : match.group(1);
+						String pôvodnéID = kategórieMetód.id + "-" + skratka;
+						id = kategórieMetód.id + "-" +
+							java.text.Normalizer.normalize(
+							skratka.trim(), java.text.Normalizer.Form.NFD)
+							.replaceAll("\\p{M}+", "");
+						if (!pôvodnéID.equals(id))
+							kategória.getValue().staréID = pôvodnéID;
 						názovKategórie = match.replaceFirst("");
 					}
 					else
@@ -4009,6 +4017,11 @@ public class RoboDoc extends GRobot
 					{
 						riadok = riadok.replace("$CATEGORYID", id).
 							replace("$CATEGORY", názovKategórie);
+						// Pôvodné odkazy s diakritikou zostanú funkčné.
+						if (null != kategória.getValue().staréID &&
+							riadok.contains("<h4>"))
+							riadok = riadok.replace("<h4>", "<h4><a id=\"" +
+								kategória.getValue().staréID + "\"></a>");
 						súbor.zapíšRiadok(riadok);
 					}
 
